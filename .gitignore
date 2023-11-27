@@ -1,3 +1,5 @@
 /.ipynb_checkpoints
 /dataset
 data.json
+/Builds
+/__pycache__
