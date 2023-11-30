@@ -93,8 +93,9 @@ void AmygdalaAudioProcessor::changeProgramName (int index, const juce::String& n
 //==============================================================================
 void AmygdalaAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)
 {
-    // Use this method as the place to do any pre-playback
-    // initialisation that you need..
+    MemoryInputStream jsonStream{ BinaryData::model_weights_json, BinaryData::model_weights_jsonSize, false };
+
+    model = RTNeural::json_parser::parseJson<float>(nlohmann::json::parse(jsonStream.readEntireStreamAsString().toStdString()), true);
 }
 
 void AmygdalaAudioProcessor::releaseResources()

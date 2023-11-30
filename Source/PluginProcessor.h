@@ -9,6 +9,7 @@
 #pragma once
 
 #include <JuceHeader.h>
+#include "../RTNeural/RTNeural/RTNeural.h"
 
 //==============================================================================
 /**
@@ -57,6 +58,8 @@ public:
     void setStateInformation (const void* data, int sizeInBytes) override;
 
 private:
+    std::unique_ptr<RTNeural::Model<float>> model;
+
     //==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (AmygdalaAudioProcessor)
 };

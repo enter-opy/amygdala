@@ -1,9 +1,1283 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <JUCERPROJECT id="d3xYGZ" name="Amygdala" projectType="audioplug" useAppConfig="0"
-              addUsingNamespaceToJuceHeader="0" displaySplashScreen="1" jucerFormatVersion="1">
+              addUsingNamespaceToJuceHeader="1" displaySplashScreen="1" jucerFormatVersion="1">
   <MAINGROUP id="mxQpe7" name="Amygdala">
     <GROUP id="{1E24BCE2-4FD4-A115-FEB6-962148A51945}" name="Source">
+      <GROUP id="{D97C2564-A3FA-5452-5A3D-557C64AC13E1}" name="RTNeural">
+        <GROUP id="{86AA9F24-72A8-27C7-DB3B-68FC6753ED9B}" name="bench">
+          <FILE id="usReXJ" name="bench_utils.hpp" compile="0" resource="0" file="RTNeural/bench/bench_utils.hpp"/>
+          <FILE id="zNc3Y7" name="CMakeLists.txt" compile="0" resource="1" file="RTNeural/bench/CMakeLists.txt"/>
+          <FILE id="ol4rHJ" name="layer_bench.cpp" compile="1" resource="0" file="RTNeural/bench/layer_bench.cpp"/>
+          <FILE id="tpT3EQ" name="layer_creator.hpp" compile="0" resource="0"
+                file="RTNeural/bench/layer_creator.hpp"/>
+          <FILE id="d8E1bt" name="model_bench.cpp" compile="1" resource="0" file="RTNeural/bench/model_bench.cpp"/>
+          <FILE id="y5guSR" name="templated_bench.hpp" compile="0" resource="0"
+                file="RTNeural/bench/templated_bench.hpp"/>
+        </GROUP>
+        <GROUP id="{369443B7-A273-DD57-7836-A502D3A02A02}" name="cmake">
+          <FILE id="RQ3u6V" name="ChooseBackend.cmake" compile="0" resource="1"
+                file="RTNeural/cmake/ChooseBackend.cmake"/>
+          <FILE id="u8vmaM" name="CXXStandard.cmake" compile="0" resource="1"
+                file="RTNeural/cmake/CXXStandard.cmake"/>
+          <FILE id="LIRWzU" name="EnableCoverageFlags.cmake" compile="0" resource="1"
+                file="RTNeural/cmake/EnableCoverageFlags.cmake"/>
+          <FILE id="VVTNMy" name="SIMDExtensions.cmake" compile="0" resource="1"
+                file="RTNeural/cmake/SIMDExtensions.cmake"/>
+        </GROUP>
+        <GROUP id="{AC78E651-AF4E-01C7-8E9B-42B0327468B5}" name="doxygen">
+          <FILE id="MMFg4c" name="Doxyfile" compile="0" resource="1" file="RTNeural/doxygen/Doxyfile"/>
+          <FILE id="VrAGkJ" name="header.html" compile="0" resource="1" file="RTNeural/doxygen/header.html"/>
+          <FILE id="M2yej9" name="logo.png" compile="0" resource="1" file="RTNeural/doxygen/logo.png"/>
+          <FILE id="yqOUzY" name="Makefile" compile="0" resource="1" file="RTNeural/doxygen/Makefile"/>
+        </GROUP>
+        <GROUP id="{20A0DC7D-AFC1-8CB4-111B-76FB8B730F13}" name="examples">
+          <GROUP id="{2CA5A559-A0F7-D80B-D5CB-49ACFB4F17ED}" name="conv1d_stateless_example">
+            <FILE id="EYUCEm" name="CMakeLists.txt" compile="0" resource="1" file="RTNeural/examples/conv1d_stateless_example/CMakeLists.txt"/>
+            <FILE id="ulSRuX" name="conv1d_stateless_example.cpp" compile="1" resource="0"
+                  file="RTNeural/examples/conv1d_stateless_example/conv1d_stateless_example.cpp"/>
+          </GROUP>
+          <GROUP id="{0E7E03D6-1B35-D8F7-6980-6F9B442196DA}" name="custom_layer_model">
+            <FILE id="KG3qIw" name="CMakeLists.txt" compile="0" resource="1" file="RTNeural/examples/custom_layer_model/CMakeLists.txt"/>
+            <FILE id="nlBlLc" name="custom_layer_model.cpp" compile="1" resource="0"
+                  file="RTNeural/examples/custom_layer_model/custom_layer_model.cpp"/>
+            <FILE id="SfDVQX" name="GatedActivation_Eigen.h" compile="0" resource="0"
+                  file="RTNeural/examples/custom_layer_model/GatedActivation_Eigen.h"/>
+            <FILE id="XypUTL" name="GatedActivation_STL.h" compile="0" resource="0"
+                  file="RTNeural/examples/custom_layer_model/GatedActivation_STL.h"/>
+            <FILE id="IHXA2p" name="GatedActivation_xsimd.h" compile="0" resource="0"
+                  file="RTNeural/examples/custom_layer_model/GatedActivation_xsimd.h"/>
+            <FILE id="exIIar" name="test_net.json" compile="0" resource="1" file="RTNeural/examples/custom_layer_model/test_net.json"/>
+          </GROUP>
+          <GROUP id="{8CDEA232-AA04-B88B-8E2A-8CDE674F00EB}" name="hello_rtneural">
+            <FILE id="BjsCSS" name="CMakeLists.txt" compile="0" resource="1" file="RTNeural/examples/hello_rtneural/CMakeLists.txt"/>
+            <FILE id="QQVkWU" name="hello_rtneural.cpp" compile="1" resource="0"
+                  file="RTNeural/examples/hello_rtneural/hello_rtneural.cpp"/>
+            <FILE id="iWinsk" name="Makefile" compile="0" resource="1" file="RTNeural/examples/hello_rtneural/Makefile"/>
+            <FILE id="VyHxCf" name="test_net.json" compile="0" resource="1" file="RTNeural/examples/hello_rtneural/test_net.json"/>
+          </GROUP>
+          <GROUP id="{C10CE237-C623-7361-9597-046C0574F552}" name="rtneural_dynamic_model">
+            <FILE id="nXWnIa" name="CMakeLists.txt" compile="0" resource="1" file="RTNeural/examples/rtneural_dynamic_model/CMakeLists.txt"/>
+            <FILE id="HlL38d" name="rtneural_dynamic_model.cpp" compile="1" resource="0"
+                  file="RTNeural/examples/rtneural_dynamic_model/rtneural_dynamic_model.cpp"/>
+          </GROUP>
+          <GROUP id="{203900DD-4A0E-31D0-8635-D249C288F086}" name="rtneural_static_model">
+            <FILE id="Yc2pip" name="CMakeLists.txt" compile="0" resource="1" file="RTNeural/examples/rtneural_static_model/CMakeLists.txt"/>
+            <FILE id="iM0oGn" name="rtneural_static_model.cpp" compile="1" resource="0"
+                  file="RTNeural/examples/rtneural_static_model/rtneural_static_model.cpp"/>
+            <FILE id="bDSWux" name="test_net.json" compile="0" resource="1" file="RTNeural/examples/rtneural_static_model/test_net.json"/>
+          </GROUP>
+          <GROUP id="{723C805F-87DF-DEF2-8CE6-9F8518D9699D}" name="torch">
+            <GROUP id="{4FF8A5BC-48EB-4969-A768-19BD081BBBF5}" name="torch_conv1d">
+              <FILE id="PUgnMB" name="CMakeLists.txt" compile="0" resource="1" file="RTNeural/examples/torch/torch_conv1d/CMakeLists.txt"/>
+              <FILE id="Dt7qtQ" name="torch_conv1d.cpp" compile="1" resource="0"
+                    file="RTNeural/examples/torch/torch_conv1d/torch_conv1d.cpp"/>
+            </GROUP>
+            <GROUP id="{FCFF4A71-225C-910B-9E0D-C1CE2D223023}" name="torch_gru">
+              <FILE id="ZeYBxM" name="CMakeLists.txt" compile="0" resource="1" file="RTNeural/examples/torch/torch_gru/CMakeLists.txt"/>
+              <FILE id="TsN5NF" name="torch_gru.cpp" compile="1" resource="0" file="RTNeural/examples/torch/torch_gru/torch_gru.cpp"/>
+            </GROUP>
+          </GROUP>
+          <FILE id="L4Ajk7" name="CMakeLists.txt" compile="0" resource="1" file="RTNeural/examples/CMakeLists.txt"/>
+          <FILE id="S4mNCq" name="README.md" compile="0" resource="1" file="RTNeural/examples/README.md"/>
+        </GROUP>
+        <GROUP id="{552080E1-2030-E8D2-49A5-4922AC039E5B}" name="models">
+          <FILE id="CoKG2c" name="bad_lstm.json" compile="0" resource="1" file="RTNeural/models/bad_lstm.json"/>
+          <FILE id="V0PLVH" name="conv.json" compile="0" resource="1" file="RTNeural/models/conv.json"/>
+          <FILE id="CM1RxK" name="conv_stateless.json" compile="0" resource="1"
+                file="RTNeural/models/conv_stateless.json"/>
+          <FILE id="eHIVoc" name="conv1d_torch.json" compile="0" resource="1"
+                file="RTNeural/models/conv1d_torch.json"/>
+          <FILE id="ygJrCH" name="conv2d.json" compile="0" resource="1" file="RTNeural/models/conv2d.json"/>
+          <FILE id="YrYLIf" name="dense.json" compile="0" resource="1" file="RTNeural/models/dense.json"/>
+          <FILE id="i1Jjom" name="full_model.json" compile="0" resource="1" file="RTNeural/models/full_model.json"/>
+          <FILE id="DQ19CZ" name="gru.json" compile="0" resource="1" file="RTNeural/models/gru.json"/>
+          <FILE id="BzEyQb" name="gru_1d.json" compile="0" resource="1" file="RTNeural/models/gru_1d.json"/>
+          <FILE id="BnF0bb" name="gru_torch.json" compile="0" resource="1" file="RTNeural/models/gru_torch.json"/>
+          <FILE id="pU8YqX" name="lstm.json" compile="0" resource="1" file="RTNeural/models/lstm.json"/>
+          <FILE id="bgMWxA" name="lstm_1d.json" compile="0" resource="1" file="RTNeural/models/lstm_1d.json"/>
+          <FILE id="Tvo2Tb" name="lstm_torch.json" compile="0" resource="1" file="RTNeural/models/lstm_torch.json"/>
+        </GROUP>
+        <GROUP id="{F3818157-89F0-83ED-F4F4-06B0E92365C0}" name="modules">
+          <GROUP id="{AC8716D0-7B64-67B5-542A-31DD4CF7CCB6}" name="Eigen">
+            <GROUP id="{D784916E-7258-057B-F10A-53769FAF2781}" name="Eigen">
+              <GROUP id="{0D7EE405-D11C-630D-B469-4655AAA2FE18}" name="src">
+                <GROUP id="{BFD09322-BA39-9B49-B66A-3B800A1C2BEC}" name="AccelerateSupport">
+                  <FILE id="tXbIei" name="AccelerateSupport.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/AccelerateSupport/AccelerateSupport.h"/>
+                  <FILE id="uPPw06" name="InternalHeaderCheck.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/AccelerateSupport/InternalHeaderCheck.h"/>
+                </GROUP>
+                <GROUP id="{B085D436-85ED-6524-884C-3A3D65004050}" name="Cholesky">
+                  <FILE id="B21ZEt" name="InternalHeaderCheck.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/Cholesky/InternalHeaderCheck.h"/>
+                  <FILE id="yBbwnZ" name="LDLT.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Cholesky/LDLT.h"/>
+                  <FILE id="f79l25" name="LLT.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Cholesky/LLT.h"/>
+                  <FILE id="WzwY4s" name="LLT_LAPACKE.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Cholesky/LLT_LAPACKE.h"/>
+                </GROUP>
+                <GROUP id="{D10112B7-01FC-38F5-4C96-9470FBFD0687}" name="CholmodSupport">
+                  <FILE id="GBnzpL" name="CholmodSupport.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/CholmodSupport/CholmodSupport.h"/>
+                  <FILE id="hP1vFy" name="InternalHeaderCheck.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/CholmodSupport/InternalHeaderCheck.h"/>
+                </GROUP>
+                <GROUP id="{2F25E7CE-1F5E-6872-F1D6-E16F979200FE}" name="Core">
+                  <GROUP id="{62B86111-2AF7-D7D9-608A-0AE756099330}" name="arch">
+                    <GROUP id="{7A6603A9-D642-7CF6-63C5-1AEF36B01A7B}" name="AltiVec">
+                      <FILE id="haBtRv" name="Complex.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/arch/AltiVec/Complex.h"/>
+                      <FILE id="tUQk6q" name="MathFunctions.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/arch/AltiVec/MathFunctions.h"/>
+                      <FILE id="QVJpfv" name="MatrixProduct.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/arch/AltiVec/MatrixProduct.h"/>
+                      <FILE id="YINuu2" name="MatrixProductCommon.h" compile="0" resource="0"
+                            file="RTNeural/modules/Eigen/Eigen/src/Core/arch/AltiVec/MatrixProductCommon.h"/>
+                      <FILE id="sEUIxG" name="MatrixProductMMA.h" compile="0" resource="0"
+                            file="RTNeural/modules/Eigen/Eigen/src/Core/arch/AltiVec/MatrixProductMMA.h"/>
+                      <FILE id="kCQWWs" name="MatrixProductMMAbfloat16.h" compile="0" resource="0"
+                            file="RTNeural/modules/Eigen/Eigen/src/Core/arch/AltiVec/MatrixProductMMAbfloat16.h"/>
+                      <FILE id="Ur7U3e" name="MatrixVectorProduct.h" compile="0" resource="0"
+                            file="RTNeural/modules/Eigen/Eigen/src/Core/arch/AltiVec/MatrixVectorProduct.h"/>
+                      <FILE id="p6esGZ" name="PacketMath.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/arch/AltiVec/PacketMath.h"/>
+                      <FILE id="kE2byy" name="TypeCasting.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/arch/AltiVec/TypeCasting.h"/>
+                    </GROUP>
+                    <GROUP id="{2147993A-F211-7C0E-99F3-0E25428767D7}" name="AVX">
+                      <FILE id="X0tM54" name="Complex.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/arch/AVX/Complex.h"/>
+                      <FILE id="jLuvye" name="MathFunctions.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/arch/AVX/MathFunctions.h"/>
+                      <FILE id="eyHoSL" name="PacketMath.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/arch/AVX/PacketMath.h"/>
+                      <FILE id="Yt81Rk" name="TypeCasting.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/arch/AVX/TypeCasting.h"/>
+                    </GROUP>
+                    <GROUP id="{A5D7334D-45B9-133F-CE71-0FF08BB0BC3B}" name="AVX512">
+                      <FILE id="p5PPFa" name="Complex.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/arch/AVX512/Complex.h"/>
+                      <FILE id="NxVGuz" name="GemmKernel.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/arch/AVX512/GemmKernel.h"/>
+                      <FILE id="X1rHCZ" name="MathFunctions.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/arch/AVX512/MathFunctions.h"/>
+                      <FILE id="lbEXFR" name="PacketMath.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/arch/AVX512/PacketMath.h"/>
+                      <FILE id="krwKGO" name="PacketMathFP16.h" compile="0" resource="0"
+                            file="RTNeural/modules/Eigen/Eigen/src/Core/arch/AVX512/PacketMathFP16.h"/>
+                      <FILE id="Pz269m" name="TrsmKernel.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/arch/AVX512/TrsmKernel.h"/>
+                      <FILE id="q8PZg3" name="TrsmUnrolls.inc" compile="0" resource="1" file="RTNeural/modules/Eigen/Eigen/src/Core/arch/AVX512/TrsmUnrolls.inc"/>
+                      <FILE id="pG5l5C" name="TypeCasting.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/arch/AVX512/TypeCasting.h"/>
+                    </GROUP>
+                    <GROUP id="{4D9B1F72-86A0-722F-B121-5003CA5747C3}" name="Default">
+                      <FILE id="DFXyNU" name="BFloat16.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/arch/Default/BFloat16.h"/>
+                      <FILE id="fC49OM" name="ConjHelper.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/arch/Default/ConjHelper.h"/>
+                      <FILE id="NZGA0b" name="GenericPacketMathFunctions.h" compile="0" resource="0"
+                            file="RTNeural/modules/Eigen/Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h"/>
+                      <FILE id="w04B4f" name="GenericPacketMathFunctionsFwd.h" compile="0"
+                            resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/arch/Default/GenericPacketMathFunctionsFwd.h"/>
+                      <FILE id="CAsBIS" name="Half.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/arch/Default/Half.h"/>
+                      <FILE id="xBpgJx" name="Settings.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/arch/Default/Settings.h"/>
+                    </GROUP>
+                    <GROUP id="{55AD8572-F88F-FCA6-144D-040F3E1F0BE4}" name="GPU">
+                      <FILE id="HHGRTC" name="Complex.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/arch/GPU/Complex.h"/>
+                      <FILE id="GNC3Xr" name="MathFunctions.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/arch/GPU/MathFunctions.h"/>
+                      <FILE id="KFIzDt" name="PacketMath.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/arch/GPU/PacketMath.h"/>
+                      <FILE id="mW6xQq" name="Tuple.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/arch/GPU/Tuple.h"/>
+                      <FILE id="lo2NZs" name="TypeCasting.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/arch/GPU/TypeCasting.h"/>
+                    </GROUP>
+                    <GROUP id="{377EF1C4-5DB9-E74C-0D5D-D84D94837E46}" name="HIP">
+                      <GROUP id="{1A94AEA1-ADA5-BE7A-53BD-B2DB153B060F}" name="hcc">
+                        <FILE id="PLegsG" name="math_constants.h" compile="0" resource="0"
+                              file="RTNeural/modules/Eigen/Eigen/src/Core/arch/HIP/hcc/math_constants.h"/>
+                      </GROUP>
+                    </GROUP>
+                    <GROUP id="{D7A64ABD-1591-E875-22E1-A6224B058A90}" name="MSA">
+                      <FILE id="L95N8f" name="Complex.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/arch/MSA/Complex.h"/>
+                      <FILE id="eW1c6m" name="MathFunctions.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/arch/MSA/MathFunctions.h"/>
+                      <FILE id="KAeHyS" name="PacketMath.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/arch/MSA/PacketMath.h"/>
+                    </GROUP>
+                    <GROUP id="{CCAFDC5D-ED98-6477-473B-96D34BFF6A9F}" name="NEON">
+                      <FILE id="u9cvMA" name="Complex.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/arch/NEON/Complex.h"/>
+                      <FILE id="MQCucp" name="GeneralBlockPanelKernel.h" compile="0" resource="0"
+                            file="RTNeural/modules/Eigen/Eigen/src/Core/arch/NEON/GeneralBlockPanelKernel.h"/>
+                      <FILE id="VYVqx4" name="MathFunctions.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/arch/NEON/MathFunctions.h"/>
+                      <FILE id="MTq5P2" name="PacketMath.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/arch/NEON/PacketMath.h"/>
+                      <FILE id="k4wVYp" name="TypeCasting.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/arch/NEON/TypeCasting.h"/>
+                      <FILE id="t4OUP8" name="UnaryFunctors.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/arch/NEON/UnaryFunctors.h"/>
+                    </GROUP>
+                    <GROUP id="{02C35096-91B4-B8D5-5D98-1724E786DE65}" name="SSE">
+                      <FILE id="pVm548" name="Complex.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/arch/SSE/Complex.h"/>
+                      <FILE id="ulCVbI" name="MathFunctions.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/arch/SSE/MathFunctions.h"/>
+                      <FILE id="VSNNPi" name="PacketMath.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/arch/SSE/PacketMath.h"/>
+                      <FILE id="MwYCqS" name="TypeCasting.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/arch/SSE/TypeCasting.h"/>
+                    </GROUP>
+                    <GROUP id="{5A9575CB-9A95-FB21-157D-CBD189139BF2}" name="SVE">
+                      <FILE id="Orn662" name="MathFunctions.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/arch/SVE/MathFunctions.h"/>
+                      <FILE id="Qg66BZ" name="PacketMath.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/arch/SVE/PacketMath.h"/>
+                      <FILE id="juYgj6" name="TypeCasting.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/arch/SVE/TypeCasting.h"/>
+                    </GROUP>
+                    <GROUP id="{D4B5AC15-4458-DBDA-BF5D-4D8F88444437}" name="SYCL">
+                      <FILE id="az2m5c" name="InteropHeaders.h" compile="0" resource="0"
+                            file="RTNeural/modules/Eigen/Eigen/src/Core/arch/SYCL/InteropHeaders.h"/>
+                      <FILE id="SBsauR" name="MathFunctions.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/arch/SYCL/MathFunctions.h"/>
+                      <FILE id="pOY4uX" name="PacketMath.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/arch/SYCL/PacketMath.h"/>
+                      <FILE id="q4frKW" name="TypeCasting.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/arch/SYCL/TypeCasting.h"/>
+                    </GROUP>
+                    <GROUP id="{F61975C5-E770-3813-467A-A615265F6FEE}" name="ZVector">
+                      <FILE id="VnXWgL" name="Complex.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/arch/ZVector/Complex.h"/>
+                      <FILE id="MEzhTV" name="MathFunctions.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/arch/ZVector/MathFunctions.h"/>
+                      <FILE id="lMVr2i" name="PacketMath.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/arch/ZVector/PacketMath.h"/>
+                    </GROUP>
+                  </GROUP>
+                  <GROUP id="{92C84C14-7FAC-A18E-9942-63EB81CF2DBF}" name="functors">
+                    <FILE id="KljEna" name="AssignmentFunctors.h" compile="0" resource="0"
+                          file="RTNeural/modules/Eigen/Eigen/src/Core/functors/AssignmentFunctors.h"/>
+                    <FILE id="RDrjjX" name="BinaryFunctors.h" compile="0" resource="0"
+                          file="RTNeural/modules/Eigen/Eigen/src/Core/functors/BinaryFunctors.h"/>
+                    <FILE id="Vzss65" name="NullaryFunctors.h" compile="0" resource="0"
+                          file="RTNeural/modules/Eigen/Eigen/src/Core/functors/NullaryFunctors.h"/>
+                    <FILE id="ylr24q" name="StlFunctors.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/functors/StlFunctors.h"/>
+                    <FILE id="qtwTHV" name="TernaryFunctors.h" compile="0" resource="0"
+                          file="RTNeural/modules/Eigen/Eigen/src/Core/functors/TernaryFunctors.h"/>
+                    <FILE id="wXJ18T" name="UnaryFunctors.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/functors/UnaryFunctors.h"/>
+                  </GROUP>
+                  <GROUP id="{E726281F-90B5-8B17-6B3D-71372E3D55FC}" name="products">
+                    <FILE id="QmaU2U" name="GeneralBlockPanelKernel.h" compile="0" resource="0"
+                          file="RTNeural/modules/Eigen/Eigen/src/Core/products/GeneralBlockPanelKernel.h"/>
+                    <FILE id="aaVcYf" name="GeneralMatrixMatrix.h" compile="0" resource="0"
+                          file="RTNeural/modules/Eigen/Eigen/src/Core/products/GeneralMatrixMatrix.h"/>
+                    <FILE id="nJSVQ3" name="GeneralMatrixMatrix_BLAS.h" compile="0" resource="0"
+                          file="RTNeural/modules/Eigen/Eigen/src/Core/products/GeneralMatrixMatrix_BLAS.h"/>
+                    <FILE id="JD6wOA" name="GeneralMatrixMatrixTriangular.h" compile="0"
+                          resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h"/>
+                    <FILE id="VnEv81" name="GeneralMatrixMatrixTriangular_BLAS.h" compile="0"
+                          resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/products/GeneralMatrixMatrixTriangular_BLAS.h"/>
+                    <FILE id="MfCvUN" name="GeneralMatrixVector.h" compile="0" resource="0"
+                          file="RTNeural/modules/Eigen/Eigen/src/Core/products/GeneralMatrixVector.h"/>
+                    <FILE id="eS0djd" name="GeneralMatrixVector_BLAS.h" compile="0" resource="0"
+                          file="RTNeural/modules/Eigen/Eigen/src/Core/products/GeneralMatrixVector_BLAS.h"/>
+                    <FILE id="ll0zCJ" name="Parallelizer.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/products/Parallelizer.h"/>
+                    <FILE id="kZQhjK" name="SelfadjointMatrixMatrix.h" compile="0" resource="0"
+                          file="RTNeural/modules/Eigen/Eigen/src/Core/products/SelfadjointMatrixMatrix.h"/>
+                    <FILE id="ZORWe2" name="SelfadjointMatrixMatrix_BLAS.h" compile="0"
+                          resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/products/SelfadjointMatrixMatrix_BLAS.h"/>
+                    <FILE id="Y3dTiA" name="SelfadjointMatrixVector.h" compile="0" resource="0"
+                          file="RTNeural/modules/Eigen/Eigen/src/Core/products/SelfadjointMatrixVector.h"/>
+                    <FILE id="NTYX74" name="SelfadjointMatrixVector_BLAS.h" compile="0"
+                          resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/products/SelfadjointMatrixVector_BLAS.h"/>
+                    <FILE id="rDV5em" name="SelfadjointProduct.h" compile="0" resource="0"
+                          file="RTNeural/modules/Eigen/Eigen/src/Core/products/SelfadjointProduct.h"/>
+                    <FILE id="OhgVG4" name="SelfadjointRank2Update.h" compile="0" resource="0"
+                          file="RTNeural/modules/Eigen/Eigen/src/Core/products/SelfadjointRank2Update.h"/>
+                    <FILE id="M5CcdP" name="TriangularMatrixMatrix.h" compile="0" resource="0"
+                          file="RTNeural/modules/Eigen/Eigen/src/Core/products/TriangularMatrixMatrix.h"/>
+                    <FILE id="lKGKBJ" name="TriangularMatrixMatrix_BLAS.h" compile="0"
+                          resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/products/TriangularMatrixMatrix_BLAS.h"/>
+                    <FILE id="XQdxiW" name="TriangularMatrixVector.h" compile="0" resource="0"
+                          file="RTNeural/modules/Eigen/Eigen/src/Core/products/TriangularMatrixVector.h"/>
+                    <FILE id="m4Z21L" name="TriangularMatrixVector_BLAS.h" compile="0"
+                          resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/products/TriangularMatrixVector_BLAS.h"/>
+                    <FILE id="obzflM" name="TriangularSolverMatrix.h" compile="0" resource="0"
+                          file="RTNeural/modules/Eigen/Eigen/src/Core/products/TriangularSolverMatrix.h"/>
+                    <FILE id="KFdlED" name="TriangularSolverMatrix_BLAS.h" compile="0"
+                          resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/products/TriangularSolverMatrix_BLAS.h"/>
+                    <FILE id="c9gN3T" name="TriangularSolverVector.h" compile="0" resource="0"
+                          file="RTNeural/modules/Eigen/Eigen/src/Core/products/TriangularSolverVector.h"/>
+                  </GROUP>
+                  <GROUP id="{5593D5D6-94AE-B917-5A82-805E7F8E656E}" name="util">
+                    <FILE id="BpCcsJ" name="Assert.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/util/Assert.h"/>
+                    <FILE id="rVR31s" name="BlasUtil.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/util/BlasUtil.h"/>
+                    <FILE id="mCtAC4" name="ConfigureVectorization.h" compile="0" resource="0"
+                          file="RTNeural/modules/Eigen/Eigen/src/Core/util/ConfigureVectorization.h"/>
+                    <FILE id="K9za7A" name="Constants.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/util/Constants.h"/>
+                    <FILE id="Bb2yyE" name="DisableStupidWarnings.h" compile="0" resource="0"
+                          file="RTNeural/modules/Eigen/Eigen/src/Core/util/DisableStupidWarnings.h"/>
+                    <FILE id="h7C6lE" name="EmulateArray.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/util/EmulateArray.h"/>
+                    <FILE id="zMlV91" name="ForwardDeclarations.h" compile="0" resource="0"
+                          file="RTNeural/modules/Eigen/Eigen/src/Core/util/ForwardDeclarations.h"/>
+                    <FILE id="qvbmdu" name="IndexedViewHelper.h" compile="0" resource="0"
+                          file="RTNeural/modules/Eigen/Eigen/src/Core/util/IndexedViewHelper.h"/>
+                    <FILE id="vfVrEx" name="IntegralConstant.h" compile="0" resource="0"
+                          file="RTNeural/modules/Eigen/Eigen/src/Core/util/IntegralConstant.h"/>
+                    <FILE id="qkaMAT" name="Macros.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/util/Macros.h"/>
+                    <FILE id="hxnahl" name="MaxSizeVector.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/util/MaxSizeVector.h"/>
+                    <FILE id="ol4ubS" name="Memory.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/util/Memory.h"/>
+                    <FILE id="gw1VSM" name="Meta.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/util/Meta.h"/>
+                    <FILE id="FFLqau" name="MKL_support.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/util/MKL_support.h"/>
+                    <FILE id="upL7H2" name="MoreMeta.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/util/MoreMeta.h"/>
+                    <FILE id="oRDh8X" name="ReenableStupidWarnings.h" compile="0" resource="0"
+                          file="RTNeural/modules/Eigen/Eigen/src/Core/util/ReenableStupidWarnings.h"/>
+                    <FILE id="ZIhDoF" name="ReshapedHelper.h" compile="0" resource="0"
+                          file="RTNeural/modules/Eigen/Eigen/src/Core/util/ReshapedHelper.h"/>
+                    <FILE id="C46wKo" name="Serializer.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/util/Serializer.h"/>
+                    <FILE id="qFFKIK" name="StaticAssert.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/util/StaticAssert.h"/>
+                    <FILE id="BkMKsV" name="SymbolicIndex.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/util/SymbolicIndex.h"/>
+                    <FILE id="apV2yn" name="XprHelper.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/util/XprHelper.h"/>
+                  </GROUP>
+                  <FILE id="nxXnSZ" name="ArithmeticSequence.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/Core/ArithmeticSequence.h"/>
+                  <FILE id="Z8kzHH" name="Array.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/Array.h"/>
+                  <FILE id="Gzm1fn" name="ArrayBase.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/ArrayBase.h"/>
+                  <FILE id="UTJpbF" name="ArrayWrapper.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/ArrayWrapper.h"/>
+                  <FILE id="ICLs68" name="Assign.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/Assign.h"/>
+                  <FILE id="wVpuvD" name="Assign_MKL.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/Assign_MKL.h"/>
+                  <FILE id="yHbseC" name="AssignEvaluator.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/Core/AssignEvaluator.h"/>
+                  <FILE id="w0MMlc" name="BandMatrix.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/BandMatrix.h"/>
+                  <FILE id="nwQqbZ" name="Block.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/Block.h"/>
+                  <FILE id="Zqizrq" name="CommaInitializer.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/Core/CommaInitializer.h"/>
+                  <FILE id="UOlQwk" name="ConditionEstimator.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/Core/ConditionEstimator.h"/>
+                  <FILE id="TKbOPo" name="CoreEvaluators.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/Core/CoreEvaluators.h"/>
+                  <FILE id="asUY39" name="CoreIterators.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/CoreIterators.h"/>
+                  <FILE id="XYNLAR" name="CwiseBinaryOp.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/CwiseBinaryOp.h"/>
+                  <FILE id="xRMMGR" name="CwiseNullaryOp.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/Core/CwiseNullaryOp.h"/>
+                  <FILE id="kS5zBS" name="CwiseTernaryOp.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/Core/CwiseTernaryOp.h"/>
+                  <FILE id="iZntYp" name="CwiseUnaryOp.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/CwiseUnaryOp.h"/>
+                  <FILE id="aYF30T" name="CwiseUnaryView.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/Core/CwiseUnaryView.h"/>
+                  <FILE id="RNyagX" name="DenseBase.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/DenseBase.h"/>
+                  <FILE id="LAZr8n" name="DenseCoeffsBase.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/Core/DenseCoeffsBase.h"/>
+                  <FILE id="XxHBVr" name="DenseStorage.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/DenseStorage.h"/>
+                  <FILE id="HIpWED" name="Diagonal.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/Diagonal.h"/>
+                  <FILE id="n9eo9O" name="DiagonalMatrix.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/Core/DiagonalMatrix.h"/>
+                  <FILE id="f2QHxA" name="DiagonalProduct.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/Core/DiagonalProduct.h"/>
+                  <FILE id="xKRoK3" name="Dot.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/Dot.h"/>
+                  <FILE id="lAWRlW" name="EigenBase.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/EigenBase.h"/>
+                  <FILE id="qvD8aa" name="ForceAlignedAccess.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/Core/ForceAlignedAccess.h"/>
+                  <FILE id="tx9JpQ" name="Fuzzy.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/Fuzzy.h"/>
+                  <FILE id="FCaXmj" name="GeneralProduct.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/Core/GeneralProduct.h"/>
+                  <FILE id="zID1eT" name="GenericPacketMath.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/Core/GenericPacketMath.h"/>
+                  <FILE id="oWoHAH" name="GlobalFunctions.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/Core/GlobalFunctions.h"/>
+                  <FILE id="CrU79N" name="IndexedView.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/IndexedView.h"/>
+                  <FILE id="JLGvOk" name="InternalHeaderCheck.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/Core/InternalHeaderCheck.h"/>
+                  <FILE id="eVVlRG" name="Inverse.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/Inverse.h"/>
+                  <FILE id="zXSeHb" name="IO.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/IO.h"/>
+                  <FILE id="npg0qZ" name="Map.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/Map.h"/>
+                  <FILE id="Vfm0sH" name="MapBase.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/MapBase.h"/>
+                  <FILE id="zu3z7P" name="MathFunctions.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/MathFunctions.h"/>
+                  <FILE id="Xrsoth" name="MathFunctionsImpl.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/Core/MathFunctionsImpl.h"/>
+                  <FILE id="JNZ7mK" name="Matrix.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/Matrix.h"/>
+                  <FILE id="qNLxFy" name="MatrixBase.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/MatrixBase.h"/>
+                  <FILE id="fsB0hg" name="NestByValue.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/NestByValue.h"/>
+                  <FILE id="l97Mmv" name="NoAlias.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/NoAlias.h"/>
+                  <FILE id="QIdnK8" name="NumTraits.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/NumTraits.h"/>
+                  <FILE id="qsz3VJ" name="PartialReduxEvaluator.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/Core/PartialReduxEvaluator.h"/>
+                  <FILE id="AV989l" name="PermutationMatrix.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/Core/PermutationMatrix.h"/>
+                  <FILE id="yROF2m" name="PlainObjectBase.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/Core/PlainObjectBase.h"/>
+                  <FILE id="QDmjOt" name="Product.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/Product.h"/>
+                  <FILE id="jsassI" name="ProductEvaluators.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/Core/ProductEvaluators.h"/>
+                  <FILE id="GImACE" name="Random.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/Random.h"/>
+                  <FILE id="CXCFbx" name="Redux.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/Redux.h"/>
+                  <FILE id="xTjbVI" name="Ref.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/Ref.h"/>
+                  <FILE id="AO3OTw" name="Replicate.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/Replicate.h"/>
+                  <FILE id="snOClE" name="Reshaped.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/Reshaped.h"/>
+                  <FILE id="cw1ZEl" name="ReturnByValue.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/ReturnByValue.h"/>
+                  <FILE id="gsunh5" name="Reverse.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/Reverse.h"/>
+                  <FILE id="qrC96i" name="Select.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/Select.h"/>
+                  <FILE id="hT6ect" name="SelfAdjointView.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/Core/SelfAdjointView.h"/>
+                  <FILE id="YPScSP" name="SelfCwiseBinaryOp.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/Core/SelfCwiseBinaryOp.h"/>
+                  <FILE id="y94goI" name="SkewSymmetricMatrix3.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/Core/SkewSymmetricMatrix3.h"/>
+                  <FILE id="Hd9li2" name="Solve.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/Solve.h"/>
+                  <FILE id="B4BIqV" name="SolverBase.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/SolverBase.h"/>
+                  <FILE id="L0AfKX" name="SolveTriangular.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/Core/SolveTriangular.h"/>
+                  <FILE id="VY5Ld5" name="StableNorm.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/StableNorm.h"/>
+                  <FILE id="rWaTob" name="StlIterators.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/StlIterators.h"/>
+                  <FILE id="G6kG0t" name="Stride.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/Stride.h"/>
+                  <FILE id="UdAJEE" name="Swap.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/Swap.h"/>
+                  <FILE id="kSZFNo" name="Transpose.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/Transpose.h"/>
+                  <FILE id="ZUa40x" name="Transpositions.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/Core/Transpositions.h"/>
+                  <FILE id="n0voQP" name="TriangularMatrix.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/Core/TriangularMatrix.h"/>
+                  <FILE id="JGCBMd" name="VectorBlock.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/VectorBlock.h"/>
+                  <FILE id="MK5KxO" name="VectorwiseOp.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/VectorwiseOp.h"/>
+                  <FILE id="MInWF3" name="Visitor.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Core/Visitor.h"/>
+                </GROUP>
+                <GROUP id="{B6C33751-F4C8-7E0F-2629-71B166A7001C}" name="Eigenvalues">
+                  <FILE id="zGlPlk" name="ComplexEigenSolver.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/Eigenvalues/ComplexEigenSolver.h"/>
+                  <FILE id="JXaAxf" name="ComplexSchur.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Eigenvalues/ComplexSchur.h"/>
+                  <FILE id="LyLVQq" name="ComplexSchur_LAPACKE.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/Eigenvalues/ComplexSchur_LAPACKE.h"/>
+                  <FILE id="PfQsUB" name="EigenSolver.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Eigenvalues/EigenSolver.h"/>
+                  <FILE id="ti22gl" name="GeneralizedEigenSolver.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h"/>
+                  <FILE id="l4D399" name="GeneralizedSelfAdjointEigenSolver.h" compile="0"
+                        resource="0" file="RTNeural/modules/Eigen/Eigen/src/Eigenvalues/GeneralizedSelfAdjointEigenSolver.h"/>
+                  <FILE id="yr8NUP" name="HessenbergDecomposition.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/Eigenvalues/HessenbergDecomposition.h"/>
+                  <FILE id="H8TH47" name="InternalHeaderCheck.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/Eigenvalues/InternalHeaderCheck.h"/>
+                  <FILE id="u2fdNj" name="MatrixBaseEigenvalues.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h"/>
+                  <FILE id="L708u1" name="RealQZ.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Eigenvalues/RealQZ.h"/>
+                  <FILE id="TakPcv" name="RealSchur.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Eigenvalues/RealSchur.h"/>
+                  <FILE id="lMD7gN" name="RealSchur_LAPACKE.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/Eigenvalues/RealSchur_LAPACKE.h"/>
+                  <FILE id="ylCNDV" name="SelfAdjointEigenSolver.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/Eigenvalues/SelfAdjointEigenSolver.h"/>
+                  <FILE id="G49RBM" name="SelfAdjointEigenSolver_LAPACKE.h" compile="0"
+                        resource="0" file="RTNeural/modules/Eigen/Eigen/src/Eigenvalues/SelfAdjointEigenSolver_LAPACKE.h"/>
+                  <FILE id="fuGt3a" name="Tridiagonalization.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/Eigenvalues/Tridiagonalization.h"/>
+                </GROUP>
+                <GROUP id="{92ACCF7E-3525-87F4-925E-203EAA66F757}" name="Geometry">
+                  <GROUP id="{730DB659-94DE-D6E4-F1A1-5C17D8A40A88}" name="arch">
+                    <FILE id="sxvCW6" name="Geometry_SIMD.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Geometry/arch/Geometry_SIMD.h"/>
+                  </GROUP>
+                  <FILE id="QW1Nzb" name="AlignedBox.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Geometry/AlignedBox.h"/>
+                  <FILE id="gHX2Lc" name="AngleAxis.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Geometry/AngleAxis.h"/>
+                  <FILE id="VGkcnd" name="EulerAngles.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Geometry/EulerAngles.h"/>
+                  <FILE id="A01WEo" name="Homogeneous.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Geometry/Homogeneous.h"/>
+                  <FILE id="eKbHDX" name="Hyperplane.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Geometry/Hyperplane.h"/>
+                  <FILE id="ItV1yk" name="InternalHeaderCheck.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/Geometry/InternalHeaderCheck.h"/>
+                  <FILE id="pjhHVE" name="OrthoMethods.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Geometry/OrthoMethods.h"/>
+                  <FILE id="dVzz7n" name="ParametrizedLine.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/Geometry/ParametrizedLine.h"/>
+                  <FILE id="fzO6T0" name="Quaternion.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Geometry/Quaternion.h"/>
+                  <FILE id="MbNgat" name="Rotation2D.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Geometry/Rotation2D.h"/>
+                  <FILE id="JQTt4D" name="RotationBase.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Geometry/RotationBase.h"/>
+                  <FILE id="n76tfa" name="Scaling.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Geometry/Scaling.h"/>
+                  <FILE id="VHirH6" name="Transform.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Geometry/Transform.h"/>
+                  <FILE id="wJOFk9" name="Translation.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Geometry/Translation.h"/>
+                  <FILE id="KDDAo2" name="Umeyama.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Geometry/Umeyama.h"/>
+                </GROUP>
+                <GROUP id="{5C235DFA-1A7A-1C10-0AFF-2A8E875EDF44}" name="Householder">
+                  <FILE id="U7zCdE" name="BlockHouseholder.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/Householder/BlockHouseholder.h"/>
+                  <FILE id="wg1wlO" name="Householder.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Householder/Householder.h"/>
+                  <FILE id="ulPI3h" name="HouseholderSequence.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/Householder/HouseholderSequence.h"/>
+                  <FILE id="sKU7Ho" name="InternalHeaderCheck.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/Householder/InternalHeaderCheck.h"/>
+                </GROUP>
+                <GROUP id="{162D9FF7-2C0D-0E2C-10F6-337DC67ACCC4}" name="IterativeLinearSolvers">
+                  <FILE id="i4ttJK" name="BasicPreconditioners.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/IterativeLinearSolvers/BasicPreconditioners.h"/>
+                  <FILE id="tV3Q1y" name="BiCGSTAB.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/IterativeLinearSolvers/BiCGSTAB.h"/>
+                  <FILE id="XaOVtw" name="ConjugateGradient.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/IterativeLinearSolvers/ConjugateGradient.h"/>
+                  <FILE id="tHUvlW" name="IncompleteCholesky.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/IterativeLinearSolvers/IncompleteCholesky.h"/>
+                  <FILE id="jPJjOD" name="IncompleteLUT.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/IterativeLinearSolvers/IncompleteLUT.h"/>
+                  <FILE id="GCX5Wc" name="InternalHeaderCheck.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/IterativeLinearSolvers/InternalHeaderCheck.h"/>
+                  <FILE id="FIdw7D" name="IterativeSolverBase.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/IterativeLinearSolvers/IterativeSolverBase.h"/>
+                  <FILE id="e2CFUf" name="LeastSquareConjugateGradient.h" compile="0"
+                        resource="0" file="RTNeural/modules/Eigen/Eigen/src/IterativeLinearSolvers/LeastSquareConjugateGradient.h"/>
+                  <FILE id="bqmHIb" name="SolveWithGuess.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/IterativeLinearSolvers/SolveWithGuess.h"/>
+                </GROUP>
+                <GROUP id="{53D92985-A657-85A8-0938-B6F372BB0E7C}" name="Jacobi">
+                  <FILE id="gJp868" name="InternalHeaderCheck.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/Jacobi/InternalHeaderCheck.h"/>
+                  <FILE id="QptOzU" name="Jacobi.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/Jacobi/Jacobi.h"/>
+                </GROUP>
+                <GROUP id="{DF81E890-221B-C9C6-5054-699FA0E841D8}" name="KLUSupport">
+                  <FILE id="nWbsox" name="InternalHeaderCheck.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/KLUSupport/InternalHeaderCheck.h"/>
+                  <FILE id="CLSiO8" name="KLUSupport.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/KLUSupport/KLUSupport.h"/>
+                </GROUP>
+                <GROUP id="{58AAFEE2-FA69-E2AB-4B13-EA9677A04D45}" name="LU">
+                  <GROUP id="{A879A251-E044-187D-1A65-97B201DB2C62}" name="arch">
+                    <FILE id="Le1skG" name="InverseSize4.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/LU/arch/InverseSize4.h"/>
+                  </GROUP>
+                  <FILE id="OrRsM9" name="Determinant.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/LU/Determinant.h"/>
+                  <FILE id="FuhovO" name="FullPivLU.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/LU/FullPivLU.h"/>
+                  <FILE id="h5vr7A" name="InternalHeaderCheck.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/LU/InternalHeaderCheck.h"/>
+                  <FILE id="FeElzr" name="InverseImpl.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/LU/InverseImpl.h"/>
+                  <FILE id="mEJDMt" name="PartialPivLU.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/LU/PartialPivLU.h"/>
+                  <FILE id="k8gIa4" name="PartialPivLU_LAPACKE.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/LU/PartialPivLU_LAPACKE.h"/>
+                </GROUP>
+                <GROUP id="{62DB7ADD-D51A-DA87-A0EE-C41F99606EC5}" name="MetisSupport">
+                  <FILE id="TYCiNS" name="InternalHeaderCheck.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/MetisSupport/InternalHeaderCheck.h"/>
+                  <FILE id="lopkAp" name="MetisSupport.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/MetisSupport/MetisSupport.h"/>
+                </GROUP>
+                <GROUP id="{D415EF5B-48C4-535B-C60B-1FD3D2A3CE89}" name="misc">
+                  <FILE id="IXSmP1" name="blas.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/misc/blas.h"/>
+                  <FILE id="rKDcYc" name="Image.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/misc/Image.h"/>
+                  <FILE id="D6f0zi" name="InternalHeaderCheck.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/misc/InternalHeaderCheck.h"/>
+                  <FILE id="eKLM68" name="Kernel.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/misc/Kernel.h"/>
+                  <FILE id="OCiMCU" name="lapacke.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/misc/lapacke.h"/>
+                  <FILE id="YDl7u6" name="lapacke_helpers.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/misc/lapacke_helpers.h"/>
+                  <FILE id="x1yNwA" name="lapacke_mangling.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/misc/lapacke_mangling.h"/>
+                  <FILE id="x4SDil" name="RealSvd2x2.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/misc/RealSvd2x2.h"/>
+                </GROUP>
+                <GROUP id="{A74A88F3-993B-38E5-3348-B5736709B5C8}" name="OrderingMethods">
+                  <FILE id="EwcQpS" name="Amd.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/OrderingMethods/Amd.h"/>
+                  <FILE id="MzUOox" name="Eigen_Colamd.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/OrderingMethods/Eigen_Colamd.h"/>
+                  <FILE id="sKGFMr" name="InternalHeaderCheck.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/OrderingMethods/InternalHeaderCheck.h"/>
+                  <FILE id="U8oFt3" name="Ordering.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/OrderingMethods/Ordering.h"/>
+                </GROUP>
+                <GROUP id="{4FA4A174-29D2-9E8D-11B7-532D3191A881}" name="PardisoSupport">
+                  <FILE id="TPFyew" name="InternalHeaderCheck.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/PardisoSupport/InternalHeaderCheck.h"/>
+                  <FILE id="yeVU1E" name="PardisoSupport.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/PardisoSupport/PardisoSupport.h"/>
+                </GROUP>
+                <GROUP id="{B63A927F-92DD-61F9-EC90-D26830CD296C}" name="PaStiXSupport">
+                  <FILE id="AwYzn8" name="InternalHeaderCheck.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/PaStiXSupport/InternalHeaderCheck.h"/>
+                  <FILE id="IPdyeu" name="PaStiXSupport.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/PaStiXSupport/PaStiXSupport.h"/>
+                </GROUP>
+                <GROUP id="{1149CB7D-F015-DA47-BF96-E669A462B44A}" name="plugins">
+                  <FILE id="vuKv8k" name="ArrayCwiseBinaryOps.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/plugins/ArrayCwiseBinaryOps.h"/>
+                  <FILE id="Hf0LlM" name="ArrayCwiseUnaryOps.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/plugins/ArrayCwiseUnaryOps.h"/>
+                  <FILE id="hGm23j" name="BlockMethods.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/plugins/BlockMethods.h"/>
+                  <FILE id="Ffky6l" name="CommonCwiseBinaryOps.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/plugins/CommonCwiseBinaryOps.h"/>
+                  <FILE id="CgHkXm" name="CommonCwiseUnaryOps.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/plugins/CommonCwiseUnaryOps.h"/>
+                  <FILE id="Yiy6QV" name="IndexedViewMethods.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/plugins/IndexedViewMethods.h"/>
+                  <FILE id="eF24vQ" name="InternalHeaderCheck.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/plugins/InternalHeaderCheck.h"/>
+                  <FILE id="EbdNol" name="MatrixCwiseBinaryOps.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/plugins/MatrixCwiseBinaryOps.h"/>
+                  <FILE id="bKvVeF" name="MatrixCwiseUnaryOps.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/plugins/MatrixCwiseUnaryOps.h"/>
+                  <FILE id="yRrBRS" name="ReshapedMethods.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/plugins/ReshapedMethods.h"/>
+                </GROUP>
+                <GROUP id="{B6C5326C-766F-7F62-4ECF-F38AE3A67992}" name="QR">
+                  <FILE id="NEhfyV" name="ColPivHouseholderQR.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/QR/ColPivHouseholderQR.h"/>
+                  <FILE id="aH2Ei2" name="ColPivHouseholderQR_LAPACKE.h" compile="0"
+                        resource="0" file="RTNeural/modules/Eigen/Eigen/src/QR/ColPivHouseholderQR_LAPACKE.h"/>
+                  <FILE id="MddvyU" name="CompleteOrthogonalDecomposition.h" compile="0"
+                        resource="0" file="RTNeural/modules/Eigen/Eigen/src/QR/CompleteOrthogonalDecomposition.h"/>
+                  <FILE id="AiJTzQ" name="FullPivHouseholderQR.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/QR/FullPivHouseholderQR.h"/>
+                  <FILE id="KSmxGl" name="HouseholderQR.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/QR/HouseholderQR.h"/>
+                  <FILE id="I5EJaY" name="HouseholderQR_LAPACKE.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/QR/HouseholderQR_LAPACKE.h"/>
+                  <FILE id="ZXQgwq" name="InternalHeaderCheck.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/QR/InternalHeaderCheck.h"/>
+                </GROUP>
+                <GROUP id="{D37987EC-785E-55A0-85B5-7066A7B8D440}" name="SparseCholesky">
+                  <FILE id="H1cgMP" name="InternalHeaderCheck.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/SparseCholesky/InternalHeaderCheck.h"/>
+                  <FILE id="BxAoru" name="SimplicialCholesky.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/SparseCholesky/SimplicialCholesky.h"/>
+                  <FILE id="klBgfV" name="SimplicialCholesky_impl.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/SparseCholesky/SimplicialCholesky_impl.h"/>
+                </GROUP>
+                <GROUP id="{0A3173D1-8C2B-B602-B8A2-225DD9D27131}" name="SparseCore">
+                  <FILE id="lt2A6d" name="AmbiVector.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/SparseCore/AmbiVector.h"/>
+                  <FILE id="TJlXVV" name="CompressedStorage.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/SparseCore/CompressedStorage.h"/>
+                  <FILE id="xSf2xo" name="ConservativeSparseSparseProduct.h" compile="0"
+                        resource="0" file="RTNeural/modules/Eigen/Eigen/src/SparseCore/ConservativeSparseSparseProduct.h"/>
+                  <FILE id="m9ZVy4" name="InternalHeaderCheck.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/SparseCore/InternalHeaderCheck.h"/>
+                  <FILE id="EckETb" name="SparseAssign.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/SparseCore/SparseAssign.h"/>
+                  <FILE id="EZ88Tx" name="SparseBlock.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/SparseCore/SparseBlock.h"/>
+                  <FILE id="JUuXNh" name="SparseColEtree.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/SparseCore/SparseColEtree.h"/>
+                  <FILE id="BRgSkS" name="SparseCompressedBase.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/SparseCore/SparseCompressedBase.h"/>
+                  <FILE id="y4TiJZ" name="SparseCwiseBinaryOp.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/SparseCore/SparseCwiseBinaryOp.h"/>
+                  <FILE id="jsiOjA" name="SparseCwiseUnaryOp.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/SparseCore/SparseCwiseUnaryOp.h"/>
+                  <FILE id="SU6ZEh" name="SparseDenseProduct.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/SparseCore/SparseDenseProduct.h"/>
+                  <FILE id="cgFqkN" name="SparseDiagonalProduct.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/SparseCore/SparseDiagonalProduct.h"/>
+                  <FILE id="foBDS0" name="SparseDot.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/SparseCore/SparseDot.h"/>
+                  <FILE id="GmkDSm" name="SparseFuzzy.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/SparseCore/SparseFuzzy.h"/>
+                  <FILE id="HxCgz0" name="SparseMap.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/SparseCore/SparseMap.h"/>
+                  <FILE id="l7pue1" name="SparseMatrix.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/SparseCore/SparseMatrix.h"/>
+                  <FILE id="PR8IjN" name="SparseMatrixBase.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/SparseCore/SparseMatrixBase.h"/>
+                  <FILE id="XUKTbZ" name="SparsePermutation.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/SparseCore/SparsePermutation.h"/>
+                  <FILE id="Nj9ela" name="SparseProduct.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/SparseCore/SparseProduct.h"/>
+                  <FILE id="sRAR1R" name="SparseRedux.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/SparseCore/SparseRedux.h"/>
+                  <FILE id="nZd8iF" name="SparseRef.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/SparseCore/SparseRef.h"/>
+                  <FILE id="FDSHEy" name="SparseSelfAdjointView.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/SparseCore/SparseSelfAdjointView.h"/>
+                  <FILE id="JpxaFI" name="SparseSolverBase.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/SparseCore/SparseSolverBase.h"/>
+                  <FILE id="yn4OfQ" name="SparseSparseProductWithPruning.h" compile="0"
+                        resource="0" file="RTNeural/modules/Eigen/Eigen/src/SparseCore/SparseSparseProductWithPruning.h"/>
+                  <FILE id="yGZsz1" name="SparseTranspose.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/SparseCore/SparseTranspose.h"/>
+                  <FILE id="uRBy4e" name="SparseTriangularView.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/SparseCore/SparseTriangularView.h"/>
+                  <FILE id="DW2vzG" name="SparseUtil.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/SparseCore/SparseUtil.h"/>
+                  <FILE id="lCUT51" name="SparseVector.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/SparseCore/SparseVector.h"/>
+                  <FILE id="dVPYto" name="SparseView.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/SparseCore/SparseView.h"/>
+                  <FILE id="ZHgsUO" name="TriangularSolver.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/SparseCore/TriangularSolver.h"/>
+                </GROUP>
+                <GROUP id="{050E8F43-D075-557D-A679-4B0435A65B7B}" name="SparseLU">
+                  <FILE id="HPsbkz" name="InternalHeaderCheck.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/SparseLU/InternalHeaderCheck.h"/>
+                  <FILE id="fwahrk" name="SparseLU.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/SparseLU/SparseLU.h"/>
+                  <FILE id="RzczaB" name="SparseLU_column_bmod.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/SparseLU/SparseLU_column_bmod.h"/>
+                  <FILE id="CfWfez" name="SparseLU_column_dfs.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/SparseLU/SparseLU_column_dfs.h"/>
+                  <FILE id="R1Uy4E" name="SparseLU_copy_to_ucol.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/SparseLU/SparseLU_copy_to_ucol.h"/>
+                  <FILE id="eEwrKD" name="SparseLU_heap_relax_snode.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/SparseLU/SparseLU_heap_relax_snode.h"/>
+                  <FILE id="i2Ic9f" name="SparseLU_kernel_bmod.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/SparseLU/SparseLU_kernel_bmod.h"/>
+                  <FILE id="yRBKzB" name="SparseLU_Memory.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/SparseLU/SparseLU_Memory.h"/>
+                  <FILE id="yE2bQi" name="SparseLU_panel_bmod.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/SparseLU/SparseLU_panel_bmod.h"/>
+                  <FILE id="jD2Mrr" name="SparseLU_panel_dfs.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/SparseLU/SparseLU_panel_dfs.h"/>
+                  <FILE id="E81IGE" name="SparseLU_pivotL.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/SparseLU/SparseLU_pivotL.h"/>
+                  <FILE id="YGStjt" name="SparseLU_pruneL.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/SparseLU/SparseLU_pruneL.h"/>
+                  <FILE id="YNv9KW" name="SparseLU_relax_snode.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/SparseLU/SparseLU_relax_snode.h"/>
+                  <FILE id="IW5RZ9" name="SparseLU_Structs.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/SparseLU/SparseLU_Structs.h"/>
+                  <FILE id="aF98Hk" name="SparseLU_SupernodalMatrix.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/SparseLU/SparseLU_SupernodalMatrix.h"/>
+                  <FILE id="MquAVk" name="SparseLU_Utils.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/SparseLU/SparseLU_Utils.h"/>
+                  <FILE id="t0RwGR" name="SparseLUImpl.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/SparseLU/SparseLUImpl.h"/>
+                </GROUP>
+                <GROUP id="{6FCD5271-E3CE-5267-3ABB-6131EC74D23A}" name="SparseQR">
+                  <FILE id="q92tVL" name="InternalHeaderCheck.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/SparseQR/InternalHeaderCheck.h"/>
+                  <FILE id="ApOtSH" name="SparseQR.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/SparseQR/SparseQR.h"/>
+                </GROUP>
+                <GROUP id="{14E86456-BA6C-60E0-EA3A-6C51C2B042B9}" name="SPQRSupport">
+                  <FILE id="Khir6a" name="InternalHeaderCheck.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/SPQRSupport/InternalHeaderCheck.h"/>
+                  <FILE id="A6KuZH" name="SuiteSparseQRSupport.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/SPQRSupport/SuiteSparseQRSupport.h"/>
+                </GROUP>
+                <GROUP id="{068E1314-8DA9-98A2-8056-1C2AB32C5973}" name="StlSupport">
+                  <FILE id="zGimm0" name="details.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/StlSupport/details.h"/>
+                  <FILE id="A5UXRh" name="StdDeque.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/StlSupport/StdDeque.h"/>
+                  <FILE id="Qcovr6" name="StdList.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/StlSupport/StdList.h"/>
+                  <FILE id="bV230A" name="StdVector.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/StlSupport/StdVector.h"/>
+                </GROUP>
+                <GROUP id="{ACA41623-DA64-2659-2014-D223959CD8E4}" name="SuperLUSupport">
+                  <FILE id="AuVXNg" name="InternalHeaderCheck.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/SuperLUSupport/InternalHeaderCheck.h"/>
+                  <FILE id="fhP0sm" name="SuperLUSupport.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/SuperLUSupport/SuperLUSupport.h"/>
+                </GROUP>
+                <GROUP id="{36CAA083-B8C1-93BF-C1EE-4B1182460FC9}" name="SVD">
+                  <FILE id="yEyOuE" name="BDCSVD.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/SVD/BDCSVD.h"/>
+                  <FILE id="obJJMU" name="BDCSVD_LAPACKE.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/SVD/BDCSVD_LAPACKE.h"/>
+                  <FILE id="Hh0Kri" name="InternalHeaderCheck.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/SVD/InternalHeaderCheck.h"/>
+                  <FILE id="cv6Smb" name="JacobiSVD.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/SVD/JacobiSVD.h"/>
+                  <FILE id="zXiDyY" name="JacobiSVD_LAPACKE.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/SVD/JacobiSVD_LAPACKE.h"/>
+                  <FILE id="sncHEZ" name="SVDBase.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/SVD/SVDBase.h"/>
+                  <FILE id="sApQ6h" name="UpperBidiagonalization.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/SVD/UpperBidiagonalization.h"/>
+                </GROUP>
+                <GROUP id="{E1C6FD39-9D10-EF54-49D7-92CCCB9473D3}" name="ThreadPool">
+                  <FILE id="GNkcza" name="Barrier.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/ThreadPool/Barrier.h"/>
+                  <FILE id="VLMTbS" name="EventCount.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/ThreadPool/EventCount.h"/>
+                  <FILE id="SwvLI5" name="InternalHeaderCheck.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/ThreadPool/InternalHeaderCheck.h"/>
+                  <FILE id="ALtxjZ" name="NonBlockingThreadPool.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/ThreadPool/NonBlockingThreadPool.h"/>
+                  <FILE id="ssT3r0" name="RunQueue.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/ThreadPool/RunQueue.h"/>
+                  <FILE id="G1sdMm" name="ThreadCancel.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/ThreadPool/ThreadCancel.h"/>
+                  <FILE id="ZPyJtA" name="ThreadEnvironment.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/ThreadPool/ThreadEnvironment.h"/>
+                  <FILE id="m54u00" name="ThreadLocal.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/ThreadPool/ThreadLocal.h"/>
+                  <FILE id="CbPXnl" name="ThreadPoolInterface.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/ThreadPool/ThreadPoolInterface.h"/>
+                  <FILE id="FC2nz4" name="ThreadYield.h" compile="0" resource="0" file="RTNeural/modules/Eigen/Eigen/src/ThreadPool/ThreadYield.h"/>
+                </GROUP>
+                <GROUP id="{776F8FBE-417F-86A0-9140-1BD60621CAE9}" name="UmfPackSupport">
+                  <FILE id="yPp6IM" name="InternalHeaderCheck.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/UmfPackSupport/InternalHeaderCheck.h"/>
+                  <FILE id="hdGhDH" name="UmfPackSupport.h" compile="0" resource="0"
+                        file="RTNeural/modules/Eigen/Eigen/src/UmfPackSupport/UmfPackSupport.h"/>
+                </GROUP>
+              </GROUP>
+              <FILE id="KjTbOU" name="AccelerateSupport" compile="0" resource="1"
+                    file="RTNeural/modules/Eigen/Eigen/AccelerateSupport"/>
+              <FILE id="UaKl48" name="Cholesky" compile="0" resource="1" file="RTNeural/modules/Eigen/Eigen/Cholesky"/>
+              <FILE id="vYyBAw" name="CholmodSupport" compile="0" resource="1" file="RTNeural/modules/Eigen/Eigen/CholmodSupport"/>
+              <FILE id="HKaq0C" name="Core" compile="0" resource="1" file="RTNeural/modules/Eigen/Eigen/Core"/>
+              <FILE id="K6LBGn" name="Dense" compile="0" resource="1" file="RTNeural/modules/Eigen/Eigen/Dense"/>
+              <FILE id="sYVtGq" name="Eigen" compile="0" resource="1" file="RTNeural/modules/Eigen/Eigen/Eigen"/>
+              <FILE id="zL5mNd" name="Eigenvalues" compile="0" resource="1" file="RTNeural/modules/Eigen/Eigen/Eigenvalues"/>
+              <FILE id="A2Y4gX" name="Geometry" compile="0" resource="1" file="RTNeural/modules/Eigen/Eigen/Geometry"/>
+              <FILE id="oQGxCB" name="Householder" compile="0" resource="1" file="RTNeural/modules/Eigen/Eigen/Householder"/>
+              <FILE id="SgqN8r" name="IterativeLinearSolvers" compile="0" resource="1"
+                    file="RTNeural/modules/Eigen/Eigen/IterativeLinearSolvers"/>
+              <FILE id="sKZfGL" name="Jacobi" compile="0" resource="1" file="RTNeural/modules/Eigen/Eigen/Jacobi"/>
+              <FILE id="kTLVeh" name="KLUSupport" compile="0" resource="1" file="RTNeural/modules/Eigen/Eigen/KLUSupport"/>
+              <FILE id="qnahpE" name="LU" compile="0" resource="1" file="RTNeural/modules/Eigen/Eigen/LU"/>
+              <FILE id="sUR499" name="MetisSupport" compile="0" resource="1" file="RTNeural/modules/Eigen/Eigen/MetisSupport"/>
+              <FILE id="Mbz50E" name="OrderingMethods" compile="0" resource="1" file="RTNeural/modules/Eigen/Eigen/OrderingMethods"/>
+              <FILE id="qhKkCZ" name="PardisoSupport" compile="0" resource="1" file="RTNeural/modules/Eigen/Eigen/PardisoSupport"/>
+              <FILE id="o5OSoe" name="PaStiXSupport" compile="0" resource="1" file="RTNeural/modules/Eigen/Eigen/PaStiXSupport"/>
+              <FILE id="PILu4l" name="QR" compile="0" resource="1" file="RTNeural/modules/Eigen/Eigen/QR"/>
+              <FILE id="ERJhbd" name="QtAlignedMalloc" compile="0" resource="1" file="RTNeural/modules/Eigen/Eigen/QtAlignedMalloc"/>
+              <FILE id="nOsDst" name="Sparse" compile="0" resource="1" file="RTNeural/modules/Eigen/Eigen/Sparse"/>
+              <FILE id="ccy8H3" name="SparseCholesky" compile="0" resource="1" file="RTNeural/modules/Eigen/Eigen/SparseCholesky"/>
+              <FILE id="sq2lyO" name="SparseCore" compile="0" resource="1" file="RTNeural/modules/Eigen/Eigen/SparseCore"/>
+              <FILE id="fVyjQw" name="SparseLU" compile="0" resource="1" file="RTNeural/modules/Eigen/Eigen/SparseLU"/>
+              <FILE id="Yc2W3K" name="SparseQR" compile="0" resource="1" file="RTNeural/modules/Eigen/Eigen/SparseQR"/>
+              <FILE id="nw7RtM" name="SPQRSupport" compile="0" resource="1" file="RTNeural/modules/Eigen/Eigen/SPQRSupport"/>
+              <FILE id="ou8vPR" name="StdDeque" compile="0" resource="1" file="RTNeural/modules/Eigen/Eigen/StdDeque"/>
+              <FILE id="tv99wk" name="StdList" compile="0" resource="1" file="RTNeural/modules/Eigen/Eigen/StdList"/>
+              <FILE id="SvLWhY" name="StdVector" compile="0" resource="1" file="RTNeural/modules/Eigen/Eigen/StdVector"/>
+              <FILE id="LI7jlD" name="SuperLUSupport" compile="0" resource="1" file="RTNeural/modules/Eigen/Eigen/SuperLUSupport"/>
+              <FILE id="KtBhL3" name="SVD" compile="0" resource="1" file="RTNeural/modules/Eigen/Eigen/SVD"/>
+              <FILE id="sBpxij" name="ThreadPool" compile="0" resource="1" file="RTNeural/modules/Eigen/Eigen/ThreadPool"/>
+              <FILE id="sPEKfC" name="UmfPackSupport" compile="0" resource="1" file="RTNeural/modules/Eigen/Eigen/UmfPackSupport"/>
+            </GROUP>
+            <FILE id="zJ5M5c" name="CMakeLists.txt" compile="0" resource="1" file="RTNeural/modules/Eigen/CMakeLists.txt"/>
+          </GROUP>
+          <GROUP id="{1099D0A9-4278-3748-8BC6-4A567CCC8DEC}" name="json">
+            <FILE id="wo6pLw" name="json.hpp" compile="0" resource="0" file="RTNeural/modules/json/json.hpp"/>
+          </GROUP>
+          <GROUP id="{ABBF0BE8-E730-0784-07F7-951E87F08BD2}" name="xsimd">
+            <GROUP id="{9A02256F-7DC4-F5F9-42B6-75FDE28DBB2F}" name="benchmark">
+              <FILE id="pzSiPF" name="CMakeLists.txt" compile="0" resource="1" file="RTNeural/modules/xsimd/benchmark/CMakeLists.txt"/>
+              <FILE id="Nk8PWx" name="main.cpp" compile="1" resource="0" file="RTNeural/modules/xsimd/benchmark/main.cpp"/>
+              <FILE id="pP5mLE" name="xsimd_benchmark.hpp" compile="0" resource="0"
+                    file="RTNeural/modules/xsimd/benchmark/xsimd_benchmark.hpp"/>
+            </GROUP>
+            <GROUP id="{C1C81DB7-5D56-1A16-AAED-3D2BC2C36AF4}" name="cmake">
+              <FILE id="fCjK59" name="JoinPaths.cmake" compile="0" resource="1" file="RTNeural/modules/xsimd/cmake/JoinPaths.cmake"/>
+            </GROUP>
+            <GROUP id="{29063751-BF6F-D2D3-0F1F-23BD3CB49D3E}" name="docs">
+              <GROUP id="{810F0B99-024C-36A9-5483-48D8EB49BA1D}" name="source">
+                <GROUP id="{08516F70-0970-C662-A1DA-4CB5B6935368}" name="_static">
+                  <FILE id="Vwyuyv" name="main_stylesheet.css" compile="0" resource="1"
+                        file="RTNeural/modules/xsimd/docs/source/_static/main_stylesheet.css"/>
+                </GROUP>
+                <GROUP id="{341C15AA-3616-375E-501C-942CA93EDA49}" name="api">
+                  <FILE id="maaVng" name="aligned_allocator.rst" compile="0" resource="1"
+                        file="RTNeural/modules/xsimd/docs/source/api/aligned_allocator.rst"/>
+                  <FILE id="roFszP" name="arch.rst" compile="0" resource="1" file="RTNeural/modules/xsimd/docs/source/api/arch.rst"/>
+                  <FILE id="uEBlmA" name="arithmetic_index.rst" compile="0" resource="1"
+                        file="RTNeural/modules/xsimd/docs/source/api/arithmetic_index.rst"/>
+                  <FILE id="PqCUVB" name="available_wrappers.rst" compile="0" resource="1"
+                        file="RTNeural/modules/xsimd/docs/source/api/available_wrappers.rst"/>
+                  <FILE id="a0xPeE" name="basic_functions.rst" compile="0" resource="1"
+                        file="RTNeural/modules/xsimd/docs/source/api/basic_functions.rst"/>
+                  <FILE id="rsIwdu" name="batch_index.rst" compile="0" resource="1" file="RTNeural/modules/xsimd/docs/source/api/batch_index.rst"/>
+                  <FILE id="bqDNcO" name="batch_manip.rst" compile="0" resource="1" file="RTNeural/modules/xsimd/docs/source/api/batch_manip.rst"/>
+                  <FILE id="vrnu0H" name="bitwise_operators_index.rst" compile="0" resource="1"
+                        file="RTNeural/modules/xsimd/docs/source/api/bitwise_operators_index.rst"/>
+                  <FILE id="fAHjW7" name="cast_index.rst" compile="0" resource="1" file="RTNeural/modules/xsimd/docs/source/api/cast_index.rst"/>
+                  <FILE id="g2uydd" name="classification_functions.rst" compile="0" resource="1"
+                        file="RTNeural/modules/xsimd/docs/source/api/classification_functions.rst"/>
+                  <FILE id="RvRT1J" name="comparison_index.rst" compile="0" resource="1"
+                        file="RTNeural/modules/xsimd/docs/source/api/comparison_index.rst"/>
+                  <FILE id="SoQPlF" name="data_transfer.rst" compile="0" resource="1"
+                        file="RTNeural/modules/xsimd/docs/source/api/data_transfer.rst"/>
+                  <FILE id="wvDxgQ" name="dispatching.rst" compile="0" resource="1" file="RTNeural/modules/xsimd/docs/source/api/dispatching.rst"/>
+                  <FILE id="djnVsc" name="error_functions.rst" compile="0" resource="1"
+                        file="RTNeural/modules/xsimd/docs/source/api/error_functions.rst"/>
+                  <FILE id="t5Oh7S" name="exponential_functions.rst" compile="0" resource="1"
+                        file="RTNeural/modules/xsimd/docs/source/api/exponential_functions.rst"/>
+                  <FILE id="RwA0Vn" name="hyperbolic_functions.rst" compile="0" resource="1"
+                        file="RTNeural/modules/xsimd/docs/source/api/hyperbolic_functions.rst"/>
+                  <FILE id="zampSY" name="instr_macros.rst" compile="0" resource="1"
+                        file="RTNeural/modules/xsimd/docs/source/api/instr_macros.rst"/>
+                  <FILE id="KiiMeP" name="math_index.rst" compile="0" resource="1" file="RTNeural/modules/xsimd/docs/source/api/math_index.rst"/>
+                  <FILE id="yGlmVW" name="misc_index.rst" compile="0" resource="1" file="RTNeural/modules/xsimd/docs/source/api/misc_index.rst"/>
+                  <FILE id="QY6h2t" name="nearint_operations.rst" compile="0" resource="1"
+                        file="RTNeural/modules/xsimd/docs/source/api/nearint_operations.rst"/>
+                  <FILE id="UMnaPw" name="power_functions.rst" compile="0" resource="1"
+                        file="RTNeural/modules/xsimd/docs/source/api/power_functions.rst"/>
+                  <FILE id="tZAGeI" name="reducer_index.rst" compile="0" resource="1"
+                        file="RTNeural/modules/xsimd/docs/source/api/reducer_index.rst"/>
+                  <FILE id="muFXhs" name="trigonometric_functions.rst" compile="0" resource="1"
+                        file="RTNeural/modules/xsimd/docs/source/api/trigonometric_functions.rst"/>
+                  <FILE id="Rs6cul" name="type_traits.rst" compile="0" resource="1" file="RTNeural/modules/xsimd/docs/source/api/type_traits.rst"/>
+                  <FILE id="EKocyo" name="xsimd_batch.rst" compile="0" resource="1" file="RTNeural/modules/xsimd/docs/source/api/xsimd_batch.rst"/>
+                  <FILE id="uYRwaD" name="xsimd_batch_bool.rst" compile="0" resource="1"
+                        file="RTNeural/modules/xsimd/docs/source/api/xsimd_batch_bool.rst"/>
+                  <FILE id="TQyMSY" name="xsimd_batch_complex.rst" compile="0" resource="1"
+                        file="RTNeural/modules/xsimd/docs/source/api/xsimd_batch_complex.rst"/>
+                  <FILE id="TdRTOg" name="xsimd_batch_constant.rst" compile="0" resource="1"
+                        file="RTNeural/modules/xsimd/docs/source/api/xsimd_batch_constant.rst"/>
+                </GROUP>
+                <FILE id="iqUebp" name="basic_usage.rst" compile="0" resource="1" file="RTNeural/modules/xsimd/docs/source/basic_usage.rst"/>
+                <FILE id="mq7RW9" name="cmake.svg" compile="0" resource="1" file="RTNeural/modules/xsimd/docs/source/cmake.svg"/>
+                <FILE id="EZIorZ" name="conda.svg" compile="0" resource="1" file="RTNeural/modules/xsimd/docs/source/conda.svg"/>
+                <FILE id="nYlStb" name="conf.py" compile="0" resource="1" file="RTNeural/modules/xsimd/docs/source/conf.py"/>
+                <FILE id="YHesye" name="index.rst" compile="0" resource="1" file="RTNeural/modules/xsimd/docs/source/index.rst"/>
+                <FILE id="SKu2JE" name="installation.rst" compile="0" resource="1"
+                      file="RTNeural/modules/xsimd/docs/source/installation.rst"/>
+                <FILE id="a4MvUm" name="migration_guide.rst" compile="0" resource="1"
+                      file="RTNeural/modules/xsimd/docs/source/migration_guide.rst"/>
+                <FILE id="SpC4ty" name="quantstack-white.svg" compile="0" resource="1"
+                      file="RTNeural/modules/xsimd/docs/source/quantstack-white.svg"/>
+                <FILE id="El5qzV" name="spack.svg" compile="0" resource="1" file="RTNeural/modules/xsimd/docs/source/spack.svg"/>
+                <FILE id="fcneDu" name="vectorized_code.rst" compile="0" resource="1"
+                      file="RTNeural/modules/xsimd/docs/source/vectorized_code.rst"/>
+                <FILE id="AK0kRN" name="xsimd.svg" compile="0" resource="1" file="RTNeural/modules/xsimd/docs/source/xsimd.svg"/>
+              </GROUP>
+              <FILE id="mXQFCW" name="Doxyfile" compile="0" resource="1" file="RTNeural/modules/xsimd/docs/Doxyfile"/>
+              <FILE id="mNPsck" name="environment.yml" compile="0" resource="1" file="RTNeural/modules/xsimd/docs/environment.yml"/>
+              <FILE id="tgw28L" name="make.bat" compile="0" resource="1" file="RTNeural/modules/xsimd/docs/make.bat"/>
+              <FILE id="HgXBmv" name="Makefile" compile="0" resource="1" file="RTNeural/modules/xsimd/docs/Makefile"/>
+            </GROUP>
+            <GROUP id="{F8B49B56-8AD8-8CB4-8BBD-47AE8779DF2B}" name="examples">
+              <FILE id="lyNBnZ" name="CMakeLists.txt" compile="0" resource="1" file="RTNeural/modules/xsimd/examples/CMakeLists.txt"/>
+              <FILE id="OuVw77" name="mandelbrot.cpp" compile="1" resource="0" file="RTNeural/modules/xsimd/examples/mandelbrot.cpp"/>
+              <FILE id="hIW46L" name="pico_bench.hpp" compile="0" resource="0" file="RTNeural/modules/xsimd/examples/pico_bench.hpp"/>
+            </GROUP>
+            <GROUP id="{BF434653-370A-19D1-9453-C15CDD37808A}" name="include">
+              <GROUP id="{DA9DEC0F-92B4-B0F5-B3A9-F4ABA8F1B159}" name="xsimd">
+                <GROUP id="{2A3E8272-4F02-8C85-3067-04D994163504}" name="arch">
+                  <GROUP id="{5B5C9F2A-8FAC-4AE2-5658-CAD7068B19A8}" name="generic">
+                    <FILE id="rWR7KF" name="xsimd_generic_arithmetic.hpp" compile="0" resource="0"
+                          file="RTNeural/modules/xsimd/include/xsimd/arch/generic/xsimd_generic_arithmetic.hpp"/>
+                    <FILE id="rwfgdu" name="xsimd_generic_complex.hpp" compile="0" resource="0"
+                          file="RTNeural/modules/xsimd/include/xsimd/arch/generic/xsimd_generic_complex.hpp"/>
+                    <FILE id="Sq4Gfc" name="xsimd_generic_details.hpp" compile="0" resource="0"
+                          file="RTNeural/modules/xsimd/include/xsimd/arch/generic/xsimd_generic_details.hpp"/>
+                    <FILE id="UJ2mc8" name="xsimd_generic_logical.hpp" compile="0" resource="0"
+                          file="RTNeural/modules/xsimd/include/xsimd/arch/generic/xsimd_generic_logical.hpp"/>
+                    <FILE id="KxaQLA" name="xsimd_generic_math.hpp" compile="0" resource="0"
+                          file="RTNeural/modules/xsimd/include/xsimd/arch/generic/xsimd_generic_math.hpp"/>
+                    <FILE id="F7l0C9" name="xsimd_generic_memory.hpp" compile="0" resource="0"
+                          file="RTNeural/modules/xsimd/include/xsimd/arch/generic/xsimd_generic_memory.hpp"/>
+                    <FILE id="krPCoi" name="xsimd_generic_rounding.hpp" compile="0" resource="0"
+                          file="RTNeural/modules/xsimd/include/xsimd/arch/generic/xsimd_generic_rounding.hpp"/>
+                    <FILE id="zIg3IL" name="xsimd_generic_trigo.hpp" compile="0" resource="0"
+                          file="RTNeural/modules/xsimd/include/xsimd/arch/generic/xsimd_generic_trigo.hpp"/>
+                  </GROUP>
+                  <FILE id="Bta9lr" name="xsimd_avx.hpp" compile="0" resource="0" file="RTNeural/modules/xsimd/include/xsimd/arch/xsimd_avx.hpp"/>
+                  <FILE id="upGLzv" name="xsimd_avx2.hpp" compile="0" resource="0" file="RTNeural/modules/xsimd/include/xsimd/arch/xsimd_avx2.hpp"/>
+                  <FILE id="dkxWaO" name="xsimd_avx512bw.hpp" compile="0" resource="0"
+                        file="RTNeural/modules/xsimd/include/xsimd/arch/xsimd_avx512bw.hpp"/>
+                  <FILE id="jgNpCI" name="xsimd_avx512cd.hpp" compile="0" resource="0"
+                        file="RTNeural/modules/xsimd/include/xsimd/arch/xsimd_avx512cd.hpp"/>
+                  <FILE id="nS2eEL" name="xsimd_avx512dq.hpp" compile="0" resource="0"
+                        file="RTNeural/modules/xsimd/include/xsimd/arch/xsimd_avx512dq.hpp"/>
+                  <FILE id="wlho18" name="xsimd_avx512f.hpp" compile="0" resource="0"
+                        file="RTNeural/modules/xsimd/include/xsimd/arch/xsimd_avx512f.hpp"/>
+                  <FILE id="tOlwV5" name="xsimd_constants.hpp" compile="0" resource="0"
+                        file="RTNeural/modules/xsimd/include/xsimd/arch/xsimd_constants.hpp"/>
+                  <FILE id="oJgizE" name="xsimd_fma3_avx.hpp" compile="0" resource="0"
+                        file="RTNeural/modules/xsimd/include/xsimd/arch/xsimd_fma3_avx.hpp"/>
+                  <FILE id="PwWpNY" name="xsimd_fma3_avx2.hpp" compile="0" resource="0"
+                        file="RTNeural/modules/xsimd/include/xsimd/arch/xsimd_fma3_avx2.hpp"/>
+                  <FILE id="pqW0Gc" name="xsimd_fma3_sse.hpp" compile="0" resource="0"
+                        file="RTNeural/modules/xsimd/include/xsimd/arch/xsimd_fma3_sse.hpp"/>
+                  <FILE id="e1XKRd" name="xsimd_fma4.hpp" compile="0" resource="0" file="RTNeural/modules/xsimd/include/xsimd/arch/xsimd_fma4.hpp"/>
+                  <FILE id="zxGJ8c" name="xsimd_generic.hpp" compile="0" resource="0"
+                        file="RTNeural/modules/xsimd/include/xsimd/arch/xsimd_generic.hpp"/>
+                  <FILE id="wPq0lV" name="xsimd_generic_fwd.hpp" compile="0" resource="0"
+                        file="RTNeural/modules/xsimd/include/xsimd/arch/xsimd_generic_fwd.hpp"/>
+                  <FILE id="nZxQE9" name="xsimd_isa.hpp" compile="0" resource="0" file="RTNeural/modules/xsimd/include/xsimd/arch/xsimd_isa.hpp"/>
+                  <FILE id="PfoWHc" name="xsimd_neon.hpp" compile="0" resource="0" file="RTNeural/modules/xsimd/include/xsimd/arch/xsimd_neon.hpp"/>
+                  <FILE id="mCMcJQ" name="xsimd_neon64.hpp" compile="0" resource="0"
+                        file="RTNeural/modules/xsimd/include/xsimd/arch/xsimd_neon64.hpp"/>
+                  <FILE id="xwttC3" name="xsimd_scalar.hpp" compile="0" resource="0"
+                        file="RTNeural/modules/xsimd/include/xsimd/arch/xsimd_scalar.hpp"/>
+                  <FILE id="EYQV8w" name="xsimd_sse2.hpp" compile="0" resource="0" file="RTNeural/modules/xsimd/include/xsimd/arch/xsimd_sse2.hpp"/>
+                  <FILE id="NqdwWR" name="xsimd_sse3.hpp" compile="0" resource="0" file="RTNeural/modules/xsimd/include/xsimd/arch/xsimd_sse3.hpp"/>
+                  <FILE id="Bw9Rv4" name="xsimd_sse4_1.hpp" compile="0" resource="0"
+                        file="RTNeural/modules/xsimd/include/xsimd/arch/xsimd_sse4_1.hpp"/>
+                  <FILE id="VPbx8K" name="xsimd_sse4_2.hpp" compile="0" resource="0"
+                        file="RTNeural/modules/xsimd/include/xsimd/arch/xsimd_sse4_2.hpp"/>
+                  <FILE id="GQGAQP" name="xsimd_ssse3.hpp" compile="0" resource="0" file="RTNeural/modules/xsimd/include/xsimd/arch/xsimd_ssse3.hpp"/>
+                  <FILE id="rFtLwp" name="xsimd_sve.hpp" compile="0" resource="0" file="RTNeural/modules/xsimd/include/xsimd/arch/xsimd_sve.hpp"/>
+                </GROUP>
+                <GROUP id="{27B38B12-3FB8-2D2B-3FB0-80A59ECFC0AE}" name="config">
+                  <FILE id="iB1XBM" name="xsimd_arch.hpp" compile="0" resource="0" file="RTNeural/modules/xsimd/include/xsimd/config/xsimd_arch.hpp"/>
+                  <FILE id="ISVYn2" name="xsimd_config.hpp" compile="0" resource="0"
+                        file="RTNeural/modules/xsimd/include/xsimd/config/xsimd_config.hpp"/>
+                  <FILE id="vsPM5E" name="xsimd_cpuid.hpp" compile="0" resource="0" file="RTNeural/modules/xsimd/include/xsimd/config/xsimd_cpuid.hpp"/>
+                </GROUP>
+                <GROUP id="{8F705E5E-981A-8CB2-DA7D-9A8AC3DFB3C3}" name="math">
+                  <FILE id="Ugryjm" name="xsimd_rem_pio2.hpp" compile="0" resource="0"
+                        file="RTNeural/modules/xsimd/include/xsimd/math/xsimd_rem_pio2.hpp"/>
+                </GROUP>
+                <GROUP id="{FE38BA50-FD5A-303B-247E-DFF0AA66EEF0}" name="memory">
+                  <FILE id="bW1JF8" name="xsimd_aligned_allocator.hpp" compile="0" resource="0"
+                        file="RTNeural/modules/xsimd/include/xsimd/memory/xsimd_aligned_allocator.hpp"/>
+                  <FILE id="XsJ0PF" name="xsimd_alignment.hpp" compile="0" resource="0"
+                        file="RTNeural/modules/xsimd/include/xsimd/memory/xsimd_alignment.hpp"/>
+                </GROUP>
+                <GROUP id="{62AB0F51-24FF-C2EC-2603-493BA60A71F1}" name="types">
+                  <FILE id="uBcYyG" name="xsimd_all_registers.hpp" compile="0" resource="0"
+                        file="RTNeural/modules/xsimd/include/xsimd/types/xsimd_all_registers.hpp"/>
+                  <FILE id="r6XIEr" name="xsimd_api.hpp" compile="0" resource="0" file="RTNeural/modules/xsimd/include/xsimd/types/xsimd_api.hpp"/>
+                  <FILE id="Hq4acU" name="xsimd_avx_register.hpp" compile="0" resource="0"
+                        file="RTNeural/modules/xsimd/include/xsimd/types/xsimd_avx_register.hpp"/>
+                  <FILE id="vtadxJ" name="xsimd_avx2_register.hpp" compile="0" resource="0"
+                        file="RTNeural/modules/xsimd/include/xsimd/types/xsimd_avx2_register.hpp"/>
+                  <FILE id="FziXBT" name="xsimd_avx512bw_register.hpp" compile="0" resource="0"
+                        file="RTNeural/modules/xsimd/include/xsimd/types/xsimd_avx512bw_register.hpp"/>
+                  <FILE id="WjgEXi" name="xsimd_avx512cd_register.hpp" compile="0" resource="0"
+                        file="RTNeural/modules/xsimd/include/xsimd/types/xsimd_avx512cd_register.hpp"/>
+                  <FILE id="bgKUYs" name="xsimd_avx512dq_register.hpp" compile="0" resource="0"
+                        file="RTNeural/modules/xsimd/include/xsimd/types/xsimd_avx512dq_register.hpp"/>
+                  <FILE id="T0eVxj" name="xsimd_avx512f_register.hpp" compile="0" resource="0"
+                        file="RTNeural/modules/xsimd/include/xsimd/types/xsimd_avx512f_register.hpp"/>
+                  <FILE id="jGoZhd" name="xsimd_batch.hpp" compile="0" resource="0" file="RTNeural/modules/xsimd/include/xsimd/types/xsimd_batch.hpp"/>
+                  <FILE id="uR1dVB" name="xsimd_batch_constant.hpp" compile="0" resource="0"
+                        file="RTNeural/modules/xsimd/include/xsimd/types/xsimd_batch_constant.hpp"/>
+                  <FILE id="wLdwMl" name="xsimd_fma3_avx_register.hpp" compile="0" resource="0"
+                        file="RTNeural/modules/xsimd/include/xsimd/types/xsimd_fma3_avx_register.hpp"/>
+                  <FILE id="juMlw3" name="xsimd_fma3_avx2_register.hpp" compile="0" resource="0"
+                        file="RTNeural/modules/xsimd/include/xsimd/types/xsimd_fma3_avx2_register.hpp"/>
+                  <FILE id="ghNcjp" name="xsimd_fma3_sse_register.hpp" compile="0" resource="0"
+                        file="RTNeural/modules/xsimd/include/xsimd/types/xsimd_fma3_sse_register.hpp"/>
+                  <FILE id="c2DHms" name="xsimd_fma4_register.hpp" compile="0" resource="0"
+                        file="RTNeural/modules/xsimd/include/xsimd/types/xsimd_fma4_register.hpp"/>
+                  <FILE id="kDceOc" name="xsimd_generic_arch.hpp" compile="0" resource="0"
+                        file="RTNeural/modules/xsimd/include/xsimd/types/xsimd_generic_arch.hpp"/>
+                  <FILE id="IAxiYA" name="xsimd_neon_register.hpp" compile="0" resource="0"
+                        file="RTNeural/modules/xsimd/include/xsimd/types/xsimd_neon_register.hpp"/>
+                  <FILE id="kmLeaE" name="xsimd_neon64_register.hpp" compile="0" resource="0"
+                        file="RTNeural/modules/xsimd/include/xsimd/types/xsimd_neon64_register.hpp"/>
+                  <FILE id="nmpa0J" name="xsimd_register.hpp" compile="0" resource="0"
+                        file="RTNeural/modules/xsimd/include/xsimd/types/xsimd_register.hpp"/>
+                  <FILE id="O0rWme" name="xsimd_sse2_register.hpp" compile="0" resource="0"
+                        file="RTNeural/modules/xsimd/include/xsimd/types/xsimd_sse2_register.hpp"/>
+                  <FILE id="ySfHdn" name="xsimd_sse3_register.hpp" compile="0" resource="0"
+                        file="RTNeural/modules/xsimd/include/xsimd/types/xsimd_sse3_register.hpp"/>
+                  <FILE id="Ix0Njt" name="xsimd_sse4_1_register.hpp" compile="0" resource="0"
+                        file="RTNeural/modules/xsimd/include/xsimd/types/xsimd_sse4_1_register.hpp"/>
+                  <FILE id="DEsp1O" name="xsimd_sse4_2_register.hpp" compile="0" resource="0"
+                        file="RTNeural/modules/xsimd/include/xsimd/types/xsimd_sse4_2_register.hpp"/>
+                  <FILE id="CEQLsN" name="xsimd_ssse3_register.hpp" compile="0" resource="0"
+                        file="RTNeural/modules/xsimd/include/xsimd/types/xsimd_ssse3_register.hpp"/>
+                  <FILE id="rH1shB" name="xsimd_sve_register.hpp" compile="0" resource="0"
+                        file="RTNeural/modules/xsimd/include/xsimd/types/xsimd_sve_register.hpp"/>
+                  <FILE id="EhG6TQ" name="xsimd_traits.hpp" compile="0" resource="0"
+                        file="RTNeural/modules/xsimd/include/xsimd/types/xsimd_traits.hpp"/>
+                  <FILE id="RveS24" name="xsimd_utils.hpp" compile="0" resource="0" file="RTNeural/modules/xsimd/include/xsimd/types/xsimd_utils.hpp"/>
+                </GROUP>
+                <FILE id="cttOAq" name="xsimd.hpp" compile="0" resource="0" file="RTNeural/modules/xsimd/include/xsimd/xsimd.hpp"/>
+              </GROUP>
+            </GROUP>
+            <GROUP id="{62571A2C-2AC2-08FB-782E-E57F5594A2FD}" name="test">
+              <FILE id="ly49d8" name="avx.sh" compile="0" resource="1" file="RTNeural/modules/xsimd/test/avx.sh"/>
+              <FILE id="FDSIHD" name="avx2.sh" compile="0" resource="1" file="RTNeural/modules/xsimd/test/avx2.sh"/>
+              <FILE id="W4mIAh" name="CMakeLists.txt" compile="0" resource="1" file="RTNeural/modules/xsimd/test/CMakeLists.txt"/>
+              <FILE id="YSRrVk" name="main.cpp" compile="1" resource="0" file="RTNeural/modules/xsimd/test/main.cpp"/>
+              <FILE id="Wqbvce" name="sse.sh" compile="0" resource="1" file="RTNeural/modules/xsimd/test/sse.sh"/>
+              <FILE id="fZsPLr" name="sse2.sh" compile="0" resource="1" file="RTNeural/modules/xsimd/test/sse2.sh"/>
+              <FILE id="QzEwdr" name="sse3.sh" compile="0" resource="1" file="RTNeural/modules/xsimd/test/sse3.sh"/>
+              <FILE id="nyfmLc" name="sse4_1.sh" compile="0" resource="1" file="RTNeural/modules/xsimd/test/sse4_1.sh"/>
+              <FILE id="YMh5X8" name="sse4_2.sh" compile="0" resource="1" file="RTNeural/modules/xsimd/test/sse4_2.sh"/>
+              <FILE id="G4eOZv" name="ssse3.sh" compile="0" resource="1" file="RTNeural/modules/xsimd/test/ssse3.sh"/>
+              <FILE id="TBlLiY" name="test_api.cpp" compile="1" resource="0" file="RTNeural/modules/xsimd/test/test_api.cpp"/>
+              <FILE id="q66mnj" name="test_arch.cpp" compile="1" resource="0" file="RTNeural/modules/xsimd/test/test_arch.cpp"/>
+              <FILE id="fSNDVO" name="test_basic_math.cpp" compile="1" resource="0"
+                    file="RTNeural/modules/xsimd/test/test_basic_math.cpp"/>
+              <FILE id="qy9gRe" name="test_batch.cpp" compile="1" resource="0" file="RTNeural/modules/xsimd/test/test_batch.cpp"/>
+              <FILE id="EKezS8" name="test_batch_bool.cpp" compile="1" resource="0"
+                    file="RTNeural/modules/xsimd/test/test_batch_bool.cpp"/>
+              <FILE id="qhMUtl" name="test_batch_cast.cpp" compile="1" resource="0"
+                    file="RTNeural/modules/xsimd/test/test_batch_cast.cpp"/>
+              <FILE id="bGRGkH" name="test_batch_complex.cpp" compile="1" resource="0"
+                    file="RTNeural/modules/xsimd/test/test_batch_complex.cpp"/>
+              <FILE id="EKUt9o" name="test_batch_constant.cpp" compile="1" resource="0"
+                    file="RTNeural/modules/xsimd/test/test_batch_constant.cpp"/>
+              <FILE id="vh1bXw" name="test_batch_float.cpp" compile="1" resource="0"
+                    file="RTNeural/modules/xsimd/test/test_batch_float.cpp"/>
+              <FILE id="r6jVQk" name="test_batch_int.cpp" compile="1" resource="0"
+                    file="RTNeural/modules/xsimd/test/test_batch_int.cpp"/>
+              <FILE id="VNr5Iq" name="test_batch_manip.cpp" compile="1" resource="0"
+                    file="RTNeural/modules/xsimd/test/test_batch_manip.cpp"/>
+              <FILE id="Syw45e" name="test_bitwise_cast.cpp" compile="1" resource="0"
+                    file="RTNeural/modules/xsimd/test/test_bitwise_cast.cpp"/>
+              <FILE id="sIwKBk" name="test_complex_exponential.cpp" compile="1" resource="0"
+                    file="RTNeural/modules/xsimd/test/test_complex_exponential.cpp"/>
+              <FILE id="LzOtwS" name="test_complex_hyperbolic.cpp" compile="1" resource="0"
+                    file="RTNeural/modules/xsimd/test/test_complex_hyperbolic.cpp"/>
+              <FILE id="JDaERl" name="test_complex_power.cpp" compile="1" resource="0"
+                    file="RTNeural/modules/xsimd/test/test_complex_power.cpp"/>
+              <FILE id="HkKeHI" name="test_complex_trigonometric.cpp" compile="1"
+                    resource="0" file="RTNeural/modules/xsimd/test/test_complex_trigonometric.cpp"/>
+              <FILE id="AIt9M0" name="test_conversion.cpp" compile="1" resource="0"
+                    file="RTNeural/modules/xsimd/test/test_conversion.cpp"/>
+              <FILE id="YNZNiR" name="test_error_gamma.cpp" compile="1" resource="0"
+                    file="RTNeural/modules/xsimd/test/test_error_gamma.cpp"/>
+              <FILE id="soWXaE" name="test_explicit_batch_instantiation.cpp" compile="1"
+                    resource="0" file="RTNeural/modules/xsimd/test/test_explicit_batch_instantiation.cpp"/>
+              <FILE id="Fh1frE" name="test_exponential.cpp" compile="1" resource="0"
+                    file="RTNeural/modules/xsimd/test/test_exponential.cpp"/>
+              <FILE id="fhXxTl" name="test_extract_pair.cpp" compile="1" resource="0"
+                    file="RTNeural/modules/xsimd/test/test_extract_pair.cpp"/>
+              <FILE id="M44t9S" name="test_fp_manipulation.cpp" compile="1" resource="0"
+                    file="RTNeural/modules/xsimd/test/test_fp_manipulation.cpp"/>
+              <FILE id="yNg23w" name="test_gnu_source.cpp" compile="1" resource="0"
+                    file="RTNeural/modules/xsimd/test/test_gnu_source.cpp"/>
+              <FILE id="pk4JOr" name="test_hyperbolic.cpp" compile="1" resource="0"
+                    file="RTNeural/modules/xsimd/test/test_hyperbolic.cpp"/>
+              <FILE id="dfuVMP" name="test_load_store.cpp" compile="1" resource="0"
+                    file="RTNeural/modules/xsimd/test/test_load_store.cpp"/>
+              <FILE id="lpjFi3" name="test_memory.cpp" compile="1" resource="0" file="RTNeural/modules/xsimd/test/test_memory.cpp"/>
+              <FILE id="ThlzKE" name="test_poly_evaluation.cpp" compile="1" resource="0"
+                    file="RTNeural/modules/xsimd/test/test_poly_evaluation.cpp"/>
+              <FILE id="IVkdlo" name="test_power.cpp" compile="1" resource="0" file="RTNeural/modules/xsimd/test/test_power.cpp"/>
+              <FILE id="pMMl9y" name="test_rounding.cpp" compile="1" resource="0"
+                    file="RTNeural/modules/xsimd/test/test_rounding.cpp"/>
+              <FILE id="akrV6C" name="test_select.cpp" compile="1" resource="0" file="RTNeural/modules/xsimd/test/test_select.cpp"/>
+              <FILE id="YYDlcs" name="test_shuffle.cpp" compile="1" resource="0"
+                    file="RTNeural/modules/xsimd/test/test_shuffle.cpp"/>
+              <FILE id="rp8xq1" name="test_sum.cpp" compile="1" resource="0" file="RTNeural/modules/xsimd/test/test_sum.cpp"/>
+              <FILE id="qM2MuX" name="test_sum.hpp" compile="0" resource="0" file="RTNeural/modules/xsimd/test/test_sum.hpp"/>
+              <FILE id="nIpjlI" name="test_traits.cpp" compile="1" resource="0" file="RTNeural/modules/xsimd/test/test_traits.cpp"/>
+              <FILE id="kiiJaR" name="test_trigonometric.cpp" compile="1" resource="0"
+                    file="RTNeural/modules/xsimd/test/test_trigonometric.cpp"/>
+              <FILE id="xZKKP3" name="test_utils.hpp" compile="0" resource="0" file="RTNeural/modules/xsimd/test/test_utils.hpp"/>
+              <FILE id="dzjat7" name="test_xsimd_api.cpp" compile="1" resource="0"
+                    file="RTNeural/modules/xsimd/test/test_xsimd_api.cpp"/>
+            </GROUP>
+            <FILE id="YpWezN" name="Changelog.rst" compile="0" resource="1" file="RTNeural/modules/xsimd/Changelog.rst"/>
+            <FILE id="YcbR15" name="CMakeLists.txt" compile="0" resource="1" file="RTNeural/modules/xsimd/CMakeLists.txt"/>
+            <FILE id="l8zaln" name="CONTRIBUTING.md" compile="0" resource="1" file="RTNeural/modules/xsimd/CONTRIBUTING.md"/>
+            <FILE id="AQvsEB" name="environment.yml" compile="0" resource="1" file="RTNeural/modules/xsimd/environment.yml"/>
+            <FILE id="rwRzz2" name="install_sde.sh" compile="0" resource="1" file="RTNeural/modules/xsimd/install_sde.sh"/>
+            <FILE id="MDMPLe" name="LICENSE" compile="0" resource="1" file="RTNeural/modules/xsimd/LICENSE"/>
+            <FILE id="hpRXwM" name="README.md" compile="0" resource="1" file="RTNeural/modules/xsimd/README.md"/>
+            <FILE id="olqTJO" name="readthedocs.yml" compile="0" resource="1" file="RTNeural/modules/xsimd/readthedocs.yml"/>
+            <FILE id="shZWyL" name="xsimd.pc.in" compile="0" resource="1" file="RTNeural/modules/xsimd/xsimd.pc.in"/>
+            <FILE id="ugauTq" name="xsimdConfig.cmake.in" compile="0" resource="1"
+                  file="RTNeural/modules/xsimd/xsimdConfig.cmake.in"/>
+          </GROUP>
+        </GROUP>
+        <GROUP id="{782D1DB2-5CF7-A709-364E-C0CB0B50F400}" name="python">
+          <GROUP id="{DDB0A19E-5202-56C0-B1F6-0CF5DF2788BF}" name="__pycache__">
+            <FILE id="BsdR2p" name="model_utils.cpython-39.pyc" compile="0" resource="1"
+                  file="RTNeural/python/__pycache__/model_utils.cpython-39.pyc"/>
+          </GROUP>
+          <FILE id="Ey1xnq" name="conv.png" compile="0" resource="1" file="RTNeural/python/conv.png"/>
+          <FILE id="ykPB6G" name="conv.py" compile="0" resource="1" file="RTNeural/python/conv.py"/>
+          <FILE id="M6CDts" name="conv_stateless.py" compile="0" resource="1"
+                file="RTNeural/python/conv_stateless.py"/>
+          <FILE id="f9xUT9" name="conv1d_torch.py" compile="0" resource="1" file="RTNeural/python/conv1d_torch.py"/>
+          <FILE id="F8D7Ca" name="conv2d.py" compile="0" resource="1" file="RTNeural/python/conv2d.py"/>
+          <FILE id="yZ7lZl" name="dense.png" compile="0" resource="1" file="RTNeural/python/dense.png"/>
+          <FILE id="q7hfFz" name="dense.py" compile="0" resource="1" file="RTNeural/python/dense.py"/>
+          <FILE id="k6Lviu" name="gru.png" compile="0" resource="1" file="RTNeural/python/gru.png"/>
+          <FILE id="CtZ0Aw" name="gru.py" compile="0" resource="1" file="RTNeural/python/gru.py"/>
+          <FILE id="bGmTvU" name="gru_1d.png" compile="0" resource="1" file="RTNeural/python/gru_1d.png"/>
+          <FILE id="MJKWE5" name="gru_1d.py" compile="0" resource="1" file="RTNeural/python/gru_1d.py"/>
+          <FILE id="tsR9VF" name="gru_torch.py" compile="0" resource="1" file="RTNeural/python/gru_torch.py"/>
+          <FILE id="KHp9xS" name="lstm.png" compile="0" resource="1" file="RTNeural/python/lstm.png"/>
+          <FILE id="L41qKb" name="lstm.py" compile="0" resource="1" file="RTNeural/python/lstm.py"/>
+          <FILE id="tvI0bC" name="lstm_1d.png" compile="0" resource="1" file="RTNeural/python/lstm_1d.png"/>
+          <FILE id="Ibvcyw" name="lstm_1d.py" compile="0" resource="1" file="RTNeural/python/lstm_1d.py"/>
+          <FILE id="HJqoDk" name="lstm_torch.py" compile="0" resource="1" file="RTNeural/python/lstm_torch.py"/>
+          <FILE id="gec68U" name="model_utils.py" compile="0" resource="1" file="RTNeural/python/model_utils.py"/>
+        </GROUP>
+        <GROUP id="{B1E81F77-2FD2-7AE5-5E86-47ED5E12D2D2}" name="RTNeural">
+          <GROUP id="{25EB5670-91B7-4345-B126-5F0C4EBA8DA9}" name="activation">
+            <FILE id="wOTuY8" name="activation.h" compile="0" resource="0" file="RTNeural/RTNeural/activation/activation.h"/>
+            <FILE id="pDCb0e" name="activation_eigen.h" compile="0" resource="0"
+                  file="RTNeural/RTNeural/activation/activation_eigen.h"/>
+            <FILE id="bkjiH7" name="activation_xsimd.h" compile="0" resource="0"
+                  file="RTNeural/RTNeural/activation/activation_xsimd.h"/>
+          </GROUP>
+          <GROUP id="{2DF3E247-BD8F-7CDE-0A8E-8547BF01B9F8}" name="batchnorm">
+            <FILE id="HT18Ro" name="batchnorm.h" compile="0" resource="0" file="RTNeural/RTNeural/batchnorm/batchnorm.h"/>
+            <FILE id="puoj6d" name="batchnorm.tpp" compile="0" resource="1" file="RTNeural/RTNeural/batchnorm/batchnorm.tpp"/>
+            <FILE id="Ka9tNO" name="batchnorm_eigen.h" compile="0" resource="0"
+                  file="RTNeural/RTNeural/batchnorm/batchnorm_eigen.h"/>
+            <FILE id="Aaw3B0" name="batchnorm_eigen.tpp" compile="0" resource="1"
+                  file="RTNeural/RTNeural/batchnorm/batchnorm_eigen.tpp"/>
+            <FILE id="UDWLcH" name="batchnorm_xsimd.h" compile="0" resource="0"
+                  file="RTNeural/RTNeural/batchnorm/batchnorm_xsimd.h"/>
+            <FILE id="pNijRq" name="batchnorm_xsimd.tpp" compile="0" resource="1"
+                  file="RTNeural/RTNeural/batchnorm/batchnorm_xsimd.tpp"/>
+            <FILE id="LFVNzj" name="batchnorm2d.h" compile="0" resource="0" file="RTNeural/RTNeural/batchnorm/batchnorm2d.h"/>
+            <FILE id="aS84zV" name="batchnorm2d.tpp" compile="0" resource="1" file="RTNeural/RTNeural/batchnorm/batchnorm2d.tpp"/>
+            <FILE id="bGnGUI" name="batchnorm2d_eigen.h" compile="0" resource="0"
+                  file="RTNeural/RTNeural/batchnorm/batchnorm2d_eigen.h"/>
+            <FILE id="uDvTLq" name="batchnorm2d_eigen.tpp" compile="0" resource="1"
+                  file="RTNeural/RTNeural/batchnorm/batchnorm2d_eigen.tpp"/>
+            <FILE id="GtXtIu" name="batchnorm2d_xsimd.h" compile="0" resource="0"
+                  file="RTNeural/RTNeural/batchnorm/batchnorm2d_xsimd.h"/>
+            <FILE id="nu9QP1" name="batchnorm2d_xsimd.tpp" compile="0" resource="1"
+                  file="RTNeural/RTNeural/batchnorm/batchnorm2d_xsimd.tpp"/>
+          </GROUP>
+          <GROUP id="{F528AA1A-743C-C7F1-D3E1-959D844EAB80}" name="conv1d">
+            <FILE id="zLtWOO" name="conv1d.h" compile="0" resource="0" file="RTNeural/RTNeural/conv1d/conv1d.h"/>
+            <FILE id="L2ZQuk" name="conv1d.tpp" compile="0" resource="1" file="RTNeural/RTNeural/conv1d/conv1d.tpp"/>
+            <FILE id="QsuCFj" name="conv1d_eigen.h" compile="0" resource="0" file="RTNeural/RTNeural/conv1d/conv1d_eigen.h"/>
+            <FILE id="nCoHy9" name="conv1d_eigen.tpp" compile="0" resource="1"
+                  file="RTNeural/RTNeural/conv1d/conv1d_eigen.tpp"/>
+            <FILE id="sOFGVc" name="conv1d_xsimd.h" compile="0" resource="0" file="RTNeural/RTNeural/conv1d/conv1d_xsimd.h"/>
+            <FILE id="CFouhL" name="conv1d_xsimd.tpp" compile="0" resource="1"
+                  file="RTNeural/RTNeural/conv1d/conv1d_xsimd.tpp"/>
+          </GROUP>
+          <GROUP id="{144ECA1A-9EC0-83A4-1D8E-A773A88EEF97}" name="conv1d_stateless">
+            <FILE id="w3NNnO" name="conv1d_stateless.h" compile="0" resource="0"
+                  file="RTNeural/RTNeural/conv1d_stateless/conv1d_stateless.h"/>
+            <FILE id="jzOH25" name="conv1d_stateless.tpp" compile="0" resource="1"
+                  file="RTNeural/RTNeural/conv1d_stateless/conv1d_stateless.tpp"/>
+            <FILE id="mA4cJ8" name="conv1d_stateless_eigen.h" compile="0" resource="0"
+                  file="RTNeural/RTNeural/conv1d_stateless/conv1d_stateless_eigen.h"/>
+            <FILE id="NcqRFC" name="conv1d_stateless_eigen.tpp" compile="0" resource="1"
+                  file="RTNeural/RTNeural/conv1d_stateless/conv1d_stateless_eigen.tpp"/>
+            <FILE id="Qfq109" name="conv1d_stateless_xsimd.h" compile="0" resource="0"
+                  file="RTNeural/RTNeural/conv1d_stateless/conv1d_stateless_xsimd.h"/>
+            <FILE id="ogyi4K" name="conv1d_stateless_xsimd.tpp" compile="0" resource="1"
+                  file="RTNeural/RTNeural/conv1d_stateless/conv1d_stateless_xsimd.tpp"/>
+          </GROUP>
+          <GROUP id="{9C6FDFA2-F691-A2AB-894A-CCB2DAC2B53C}" name="conv2d">
+            <FILE id="e1UTZC" name="conv2d.h" compile="0" resource="0" file="RTNeural/RTNeural/conv2d/conv2d.h"/>
+            <FILE id="G66nk2" name="conv2d.tpp" compile="0" resource="1" file="RTNeural/RTNeural/conv2d/conv2d.tpp"/>
+            <FILE id="UQ5EA2" name="conv2d_eigen.h" compile="0" resource="0" file="RTNeural/RTNeural/conv2d/conv2d_eigen.h"/>
+            <FILE id="GoaGnb" name="conv2d_eigen.tpp" compile="0" resource="1"
+                  file="RTNeural/RTNeural/conv2d/conv2d_eigen.tpp"/>
+            <FILE id="Aqxsl9" name="conv2d_xsimd.h" compile="0" resource="0" file="RTNeural/RTNeural/conv2d/conv2d_xsimd.h"/>
+            <FILE id="ZIVTOQ" name="conv2d_xsimd.tpp" compile="0" resource="1"
+                  file="RTNeural/RTNeural/conv2d/conv2d_xsimd.tpp"/>
+          </GROUP>
+          <GROUP id="{608807BB-D776-1E49-69AF-6CE4DB33C203}" name="dense">
+            <FILE id="Z7SByT" name="dense.h" compile="0" resource="0" file="RTNeural/RTNeural/dense/dense.h"/>
+            <FILE id="UUBYAQ" name="dense_eigen.h" compile="0" resource="0" file="RTNeural/RTNeural/dense/dense_eigen.h"/>
+            <FILE id="uzuo7t" name="dense_xsimd.h" compile="0" resource="0" file="RTNeural/RTNeural/dense/dense_xsimd.h"/>
+          </GROUP>
+          <GROUP id="{FECDB9A1-C823-6BDA-42AD-7C69ABF5F8C8}" name="gru">
+            <FILE id="hjBkir" name="gru.h" compile="0" resource="0" file="RTNeural/RTNeural/gru/gru.h"/>
+            <FILE id="vqT13C" name="gru.tpp" compile="0" resource="1" file="RTNeural/RTNeural/gru/gru.tpp"/>
+            <FILE id="HAELWv" name="gru_eigen.h" compile="0" resource="0" file="RTNeural/RTNeural/gru/gru_eigen.h"/>
+            <FILE id="NPaI04" name="gru_eigen.tpp" compile="0" resource="1" file="RTNeural/RTNeural/gru/gru_eigen.tpp"/>
+            <FILE id="BPeE3h" name="gru_xsimd.h" compile="0" resource="0" file="RTNeural/RTNeural/gru/gru_xsimd.h"/>
+            <FILE id="tYlr6J" name="gru_xsimd.tpp" compile="0" resource="1" file="RTNeural/RTNeural/gru/gru_xsimd.tpp"/>
+          </GROUP>
+          <GROUP id="{58B7A32B-1232-D9FC-DBEC-4F550EEBEFA4}" name="lstm">
+            <FILE id="svMWl9" name="lstm.h" compile="0" resource="0" file="RTNeural/RTNeural/lstm/lstm.h"/>
+            <FILE id="TgMhLw" name="lstm.tpp" compile="0" resource="1" file="RTNeural/RTNeural/lstm/lstm.tpp"/>
+            <FILE id="QZFGgQ" name="lstm_eigen.h" compile="0" resource="0" file="RTNeural/RTNeural/lstm/lstm_eigen.h"/>
+            <FILE id="qc9HXo" name="lstm_eigen.tpp" compile="0" resource="1" file="RTNeural/RTNeural/lstm/lstm_eigen.tpp"/>
+            <FILE id="dJlX5O" name="lstm_xsimd.h" compile="0" resource="0" file="RTNeural/RTNeural/lstm/lstm_xsimd.h"/>
+            <FILE id="u3If3V" name="lstm_xsimd.tpp" compile="0" resource="1" file="RTNeural/RTNeural/lstm/lstm_xsimd.tpp"/>
+          </GROUP>
+          <GROUP id="{645DBBCB-BAA9-DBB3-6DF0-AB94ECD047DB}" name="maths">
+            <FILE id="U7vMpT" name="maths_eigen.h" compile="0" resource="0" file="RTNeural/RTNeural/maths/maths_eigen.h"/>
+            <FILE id="qpzfAH" name="maths_stl.h" compile="0" resource="0" file="RTNeural/RTNeural/maths/maths_stl.h"/>
+            <FILE id="dKe9Sc" name="maths_xsimd.h" compile="0" resource="0" file="RTNeural/RTNeural/maths/maths_xsimd.h"/>
+          </GROUP>
+          <GROUP id="{655F0C25-E460-CB4B-E387-D2F0C641922D}" name="xsimd-legacy">
+            <GROUP id="{3696B385-DB28-4BDC-CEB2-BD8A3FB0F44B}" name="algorithms">
+              <FILE id="lUE6KX" name="algorithms.hpp" compile="0" resource="0" file="RTNeural/RTNeural/xsimd-legacy/algorithms/algorithms.hpp"/>
+            </GROUP>
+            <FILE id="ew8bYd" name="README.md" compile="0" resource="1" file="RTNeural/RTNeural/xsimd-legacy/README.md"/>
+          </GROUP>
+          <FILE id="sq2Ptl" name="CMakeLists.txt" compile="0" resource="1" file="RTNeural/RTNeural/CMakeLists.txt"/>
+          <FILE id="Y7CTq3" name="common.h" compile="0" resource="0" file="RTNeural/RTNeural/common.h"/>
+          <FILE id="wvgBEC" name="Layer.h" compile="0" resource="0" file="RTNeural/RTNeural/Layer.h"/>
+          <FILE id="fWyr8Z" name="Model.h" compile="0" resource="0" file="RTNeural/RTNeural/Model.h"/>
+          <FILE id="RAw0lc" name="model_loader.h" compile="0" resource="0" file="RTNeural/RTNeural/model_loader.h"/>
+          <FILE id="DVPVRv" name="ModelT.h" compile="0" resource="0" file="RTNeural/RTNeural/ModelT.h"/>
+          <FILE id="IZitU7" name="RTNeural.cpp" compile="1" resource="0" file="RTNeural/RTNeural/RTNeural.cpp"/>
+          <FILE id="vnbHK3" name="RTNeural.h" compile="0" resource="0" file="RTNeural/RTNeural/RTNeural.h"/>
+          <FILE id="V5dRmk" name="torch_helpers.h" compile="0" resource="0" file="RTNeural/RTNeural/torch_helpers.h"/>
+        </GROUP>
+        <GROUP id="{9099E3FD-7820-02A9-B7F7-B6F6E87ECFD4}" name="test_data">
+          <FILE id="CAB9mq" name="conv_stateless_x_python.csv" compile="0" resource="1"
+                file="RTNeural/test_data/conv_stateless_x_python.csv"/>
+          <FILE id="eLICyR" name="conv_stateless_y_python.csv" compile="0" resource="1"
+                file="RTNeural/test_data/conv_stateless_y_python.csv"/>
+          <FILE id="mg2cJL" name="conv_x_python.csv" compile="0" resource="1"
+                file="RTNeural/test_data/conv_x_python.csv"/>
+          <FILE id="b5DOWG" name="conv_y_python.csv" compile="0" resource="1"
+                file="RTNeural/test_data/conv_y_python.csv"/>
+          <FILE id="UlHpaz" name="conv1d_torch_x_python.csv" compile="0" resource="1"
+                file="RTNeural/test_data/conv1d_torch_x_python.csv"/>
+          <FILE id="ZVoh6R" name="conv1d_torch_y_python.csv" compile="0" resource="1"
+                file="RTNeural/test_data/conv1d_torch_y_python.csv"/>
+          <FILE id="XocB06" name="conv2d_x_python.csv" compile="0" resource="1"
+                file="RTNeural/test_data/conv2d_x_python.csv"/>
+          <FILE id="iKVUsn" name="conv2d_y_python.csv" compile="0" resource="1"
+                file="RTNeural/test_data/conv2d_y_python.csv"/>
+          <FILE id="Kr2Z6j" name="dense_x_python.csv" compile="0" resource="1"
+                file="RTNeural/test_data/dense_x_python.csv"/>
+          <FILE id="mTpDIh" name="dense_y_python.csv" compile="0" resource="1"
+                file="RTNeural/test_data/dense_y_python.csv"/>
+          <FILE id="jCa5I2" name="gru_1d_x_python.csv" compile="0" resource="1"
+                file="RTNeural/test_data/gru_1d_x_python.csv"/>
+          <FILE id="yp26D7" name="gru_1d_y_python.csv" compile="0" resource="1"
+                file="RTNeural/test_data/gru_1d_y_python.csv"/>
+          <FILE id="UFZSO6" name="gru_torch_x_python.csv" compile="0" resource="1"
+                file="RTNeural/test_data/gru_torch_x_python.csv"/>
+          <FILE id="c2TDs0" name="gru_torch_y_python.csv" compile="0" resource="1"
+                file="RTNeural/test_data/gru_torch_y_python.csv"/>
+          <FILE id="U227Oy" name="gru_x_python.csv" compile="0" resource="1"
+                file="RTNeural/test_data/gru_x_python.csv"/>
+          <FILE id="XE094Q" name="gru_y_python.csv" compile="0" resource="1"
+                file="RTNeural/test_data/gru_y_python.csv"/>
+          <FILE id="XDMV7j" name="lstm_1d_x_python.csv" compile="0" resource="1"
+                file="RTNeural/test_data/lstm_1d_x_python.csv"/>
+          <FILE id="ltdEn2" name="lstm_1d_y_python.csv" compile="0" resource="1"
+                file="RTNeural/test_data/lstm_1d_y_python.csv"/>
+          <FILE id="wR6NF0" name="lstm_torch_x_python.csv" compile="0" resource="1"
+                file="RTNeural/test_data/lstm_torch_x_python.csv"/>
+          <FILE id="tcz5KB" name="lstm_torch_y_python.csv" compile="0" resource="1"
+                file="RTNeural/test_data/lstm_torch_y_python.csv"/>
+          <FILE id="o7odV6" name="lstm_x_python.csv" compile="0" resource="1"
+                file="RTNeural/test_data/lstm_x_python.csv"/>
+          <FILE id="s7UVPW" name="lstm_y_python.csv" compile="0" resource="1"
+                file="RTNeural/test_data/lstm_y_python.csv"/>
+        </GROUP>
+        <GROUP id="{A606DBF7-1259-6C1E-E3E7-08C79C16664B}" name="tests">
+          <FILE id="QjNBME" name="bad_model_test.hpp" compile="0" resource="0"
+                file="RTNeural/tests/bad_model_test.hpp"/>
+          <FILE id="Zkms06" name="CMakeLists.txt" compile="0" resource="1" file="RTNeural/tests/CMakeLists.txt"/>
+          <FILE id="JbUin0" name="conv2d_model.h" compile="0" resource="0" file="RTNeural/tests/conv2d_model.h"/>
+          <FILE id="m6DJKD" name="load_csv.hpp" compile="0" resource="0" file="RTNeural/tests/load_csv.hpp"/>
+          <FILE id="hiNJCN" name="model_test.hpp" compile="0" resource="0" file="RTNeural/tests/model_test.hpp"/>
+          <FILE id="M9cA6f" name="sample_rate_rnn_test.hpp" compile="0" resource="0"
+                file="RTNeural/tests/sample_rate_rnn_test.hpp"/>
+          <FILE id="wY0t4f" name="templated_tests.hpp" compile="0" resource="0"
+                file="RTNeural/tests/templated_tests.hpp"/>
+          <FILE id="Y4E51b" name="test_configs.hpp" compile="0" resource="0"
+                file="RTNeural/tests/test_configs.hpp"/>
+          <FILE id="isrGty" name="tests.cpp" compile="1" resource="0" file="RTNeural/tests/tests.cpp"/>
+          <FILE id="GZs8YC" name="torch_conv1d_test.hpp" compile="0" resource="0"
+                file="RTNeural/tests/torch_conv1d_test.hpp"/>
+          <FILE id="I53ulH" name="torch_gru_test.hpp" compile="0" resource="0"
+                file="RTNeural/tests/torch_gru_test.hpp"/>
+          <FILE id="ybm4LM" name="torch_lstm_test.hpp" compile="0" resource="0"
+                file="RTNeural/tests/torch_lstm_test.hpp"/>
+          <FILE id="nF3SRc" name="util_tests.hpp" compile="0" resource="0" file="RTNeural/tests/util_tests.hpp"/>
+        </GROUP>
+        <FILE id="wZGERl" name="CMakeLists.txt" compile="0" resource="1" file="RTNeural/CMakeLists.txt"/>
+        <FILE id="yTrowD" name="LICENSE" compile="0" resource="1" file="RTNeural/LICENSE"/>
+        <FILE id="XgriVX" name="README.md" compile="0" resource="1" file="RTNeural/README.md"/>
+      </GROUP>
+      <FILE id="P9MLyO" name="model_weights.json" compile="0" resource="1"
+            file="Source/Model/model_weights.json"/>
       <FILE id="J5GJa1" name="PluginProcessor.cpp" compile="1" resource="0"
             file="Source/PluginProcessor.cpp"/>
       <FILE id="aRLkW4" name="PluginProcessor.h" compile="0" resource="0"
