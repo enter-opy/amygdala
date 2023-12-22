@@ -58,7 +58,15 @@ public:
     void setStateInformation (const void* data, int sizeInBytes) override;
 
 private:
+    static constexpr auto fftOrder = 11;
+    static constexpr auto fftSize = 1 << fftOrder;
+
     std::unique_ptr<RTNeural::Model<float>> model;
+
+    dsp::FFT forwardFFT;
+
+    float fifo[fftSize];
+    int fifoIndex = 0;
 
     //==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (AmygdalaAudioProcessor)
